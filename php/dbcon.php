@@ -1,8 +1,8 @@
 <?php 
-$servername = "191.96.56.1";
-$username = "username";
-$password = "UDU>;ll4&";
-$dbname = "u812963415_fot_car_rent";
+$servername = "173.254.104.205";
+$username = "mayurapa_fotdb";
+$password = "3@rn(d=YjxNe";
+$dbname = "mayurapa_carrent";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
