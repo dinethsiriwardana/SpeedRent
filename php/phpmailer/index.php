@@ -22,7 +22,7 @@
     //mail body
     $body = "This is sample mail";
     //receiver's mail
-    $receiver = "hasithasandeepa2000@gmail.com";
+    $receiver = "@gmail.com";
 
     //Create instance of phpmailer
     $mail = new PHPMailer();
