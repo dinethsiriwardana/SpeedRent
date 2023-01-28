@@ -17,7 +17,7 @@
         //mail user name
         $userName = "info@speedrent.live";
         //mail password
-        $password = "DB pswd";
+        $password = "3@rn(d=YjxNe";
         //sender's mail
         $sentby = "info@speedrent.live";
         //mail subject
