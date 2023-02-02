@@ -12,17 +12,17 @@
     //host
     $host = "smtp.hostinger.com";
     //mail user name
-    $userName = "info@gmzeo.edu.lk";
+    $userName = "info@speedrent.live";
     //mail password
-    $password = "@Studio0512";
+    $password = "3@rn(d=YjxNe";
     //sender's mail
-    $sentby = "info@gmzeo.edu.lk";
+    $sentby = "info@speedrent.live";
     //mail subject
     $subject = "Test mail using phpmailer";
     //mail body
     $body = "This is sample mail";
     //receiver's mail
-    $receiver = "@gmail.com";
+    $receiver = "dinethsiriwardana28@gmail.com";
 
     //Create instance of phpmailer
     $mail = new PHPMailer();
