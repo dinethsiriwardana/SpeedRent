@@ -1,46 +1,28 @@
 
 <?php
 include "dbcon.php";
-include "";
+include "encryption.php";
 
 session_start();
 
 
 
-$email =    $_POST['email'];
-$uname =  $_POST['username'];
+$email = $_POST['email'];
+$uname = $_POST['username'];
 $pwd = encryption($_POST['password']);
-$pwdcom = encryption($_POST['passwordagn']);
+$fname = $_POST['fname'];
+$lname = $_POST['lname'];
+$add = $_POST['address'];
+$phnno = $_POST['phonenum'];
+$ID = $_POST['idno'];
 
-
-    $sql = "INSERT INTO user_accounts (, U_password,Approval)
-    VALUES ('$username', '$password','N')";
+    $sql = "INSERT INTO user_accounts (email, user_name, password, fname, lname, address, phoneNo, idno)
+    VALUES ('$email', '$uname','$pwd', '$fname', '$lname', '$add', '$phnno', '$ID')";
     if ($conn->query($sql) === TRUE) {
-        header("location: ../register_personal.php?user=$username");
+        echo "\n\nUser record added succesfully";
 
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        echo "\n\nError: " . $sql . "<br>" . $conn->error;
     }
 
-
-
 $conn->close();
-
-
-Footer
-© 2023 GitHub, Inc.
-Footer navigation
-
-    Terms
-    Privacy
-    Security
-    Status
-    Docs
-    Contact GitHub
-    Pricing
-    API
-    Training
-    Blog
-    About
-
-Easy-Bank-System---Group-Project-by-PHP/reg_user_data.php at master · dinethsiriwardana/Easy-Bank-System---Group-Project-by-PHP
