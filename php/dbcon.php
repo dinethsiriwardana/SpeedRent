@@ -1,8 +1,8 @@
 <?php 
 $servername = "191.96.56.1";
-$username = "mayurapa_carrent";
-$password = "8Vry3U+8cB";
-$dbname = "mayurapa_carrent";
+$username = "u812963415_speedrent";
+$password = "9i@4?MH^J]r";
+$dbname = "u812963415_speedrent";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -10,5 +10,5 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
-
+echo "Connected successfully";
 ?>
