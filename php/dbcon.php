@@ -1,7 +1,7 @@
 <?php 
-$servername = "173.254.104.205";
-$username = "mayurapa_fotdb";
-$password = "3@rn(d=YjxNe";
+$servername = "191.96.56.1";
+$username = "mayurapa_carrent";
+$password = "8Vry3U+8cB";
 $dbname = "mayurapa_carrent";
 
 // Create connection
