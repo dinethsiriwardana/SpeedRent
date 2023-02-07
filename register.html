@@ -57,10 +57,10 @@
                                 <h3 class="text-center multisteps-form__title" style="color: var(--bs-red);">Login Info</h3>
                                 <div id="form-content" class="multisteps-form__content">
                                     <div class="d-xl-flex flex-column justify-content-xl-center align-items-xl-center form-row mt-4" id="input-grp-double">
-                                        <div class="col-12 col-sm-6" style="margin-bottom: 15px;"><input class="form-control multisteps-form__input" type="text" placeholder="Email" name="email"></div>
-                                        <div class="col-12 col-sm-6" style="margin-bottom: 15px;"><input class="form-control multisteps-form__input" type="text" placeholder="User Name" name="username"></div>
-                                        <div class="col-12 col-sm-6 mt-4 mt-sm-0" style="margin-bottom: 15px;"><input class="form-control multisteps-form__input" type="text" placeholder="Password" name="password"></div>
-                                        <div class="col-12 col-sm-6 mt-4 mt-sm-0" style="margin-bottom: 15px;"><input class="form-control multisteps-form__input" type="text" placeholder="Password Again" name="passwordagn"></div>
+                                        <div class="col-12 col-sm-6" style="margin-bottom: 15px;"><input class="form-control multisteps-form__input" type="text" placeholder="Email" name="email" id="email"></div>
+                                        <div class="col-12 col-sm-6" style="margin-bottom: 15px;"><input class="form-control multisteps-form__input" type="text" placeholder="User Name" name="username" id="username"></div>
+                                        <div class="col-12 col-sm-6 mt-4 mt-sm-0" style="margin-bottom: 15px;"><input class="form-control multisteps-form__input" type="text" placeholder="Password" name="password" id="password"></div>
+                                        <div class="col-12 col-sm-6 mt-4 mt-sm-0" style="margin-bottom: 15px;"><input class="form-control multisteps-form__input" type="text" placeholder="Confirm Password" name="passwordagn" id="passwordagn"></div>
                                     </div>
                                     <div class="d-xl-flex justify-content-xl-end button-row d-flex mt-4" id="next-button"><button class="btn btn btn-primary ml-auto js-btn-next" type="button" title="Next" style="width: 100px;background: var(--bs-red);border-style: none;">Next</button></div>
                                 </div>
@@ -78,6 +78,15 @@
                                         <div class="container">
                                             <div class="row">
                                                 <div class="col-md-12"><input class="form-control multisteps-form__input" type="text" placeholder="Address" name="address"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="input-grp-single-1" class="form-row mt-4">
+                                    <div class="col-12">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-md-12"><input class="form-control multisteps-form__input" type="text" placeholder="Phone Number" name="phonenum"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -112,6 +121,7 @@
     <script src="assets/js/bs-init.js"></script>
     <script src="assets/js/Multi-step-form.js"></script>
     <script src="assets/js/show_hide.js"></script>
+    <script src="register.js"></script>
 </body>
 
 </html>
