@@ -18,11 +18,10 @@ $select = "*";
 
 
 
-$sql = "SELECT $select FROM $table where $where";
+echo $sql = "SELECT $select FROM $table where $where";
 $result = $conn->query($sql);
 
 if ($result->num_rows == 1) {
-
     $row = $result->fetch_assoc();
 
     echo $uid = $row["email"];
