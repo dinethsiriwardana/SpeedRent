@@ -22,11 +22,18 @@
         $phnno = $_POST['phonenum'];
         $ID = $_POST['idno'];
 
-       /* $sql = "UPDATE user_accounts SET (user_name, password, fname, lname, address, phoneNo, idno)
-                VALUES ('$uname','$pwd', '$fname', '$lname', '$add', '$phnno', '$ID')";*/
-
-        $sql = "UPDATE user_accounts SET user_name ='$uname',  password = '$pwd', fname = $fname, lname = $lname, address = $add, phoneNo = $phnno, idno = $ID WHERE email = $email";
-    }else{
+        $updatesql = "UPDATE user_accounts SET user_name ='$uname',  password = '$pwd', fname = '$fname', lname = '$lname', address = '$add', phoneNo = '$phnno', idno = $ID WHERE email = '$email'";
+    }
+    else{
         echo "E mail does not exists...!";
     }
+
+    if($conn -> query($updatesql) === TRUE)
+    {
+        echo "Record updated successfully";
+    }else{
+        echo "Error updating record ". $conn -> error;
+    }
+
+    $conn->close();
 ?>
