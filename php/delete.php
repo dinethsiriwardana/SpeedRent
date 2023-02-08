@@ -2,6 +2,9 @@
 include "dbcon.php";
 include "encryption.php";
 
+
+
+
 function deleteData($conn,$uid){
     $sql = "DELETE FROM user_accounts WHERE uid= '$uid'";
 
