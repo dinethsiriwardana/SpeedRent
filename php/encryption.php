@@ -1,6 +1,5 @@
 <?php
 
-encryption("DInethSi");
 function encryption($key)
 {
 
