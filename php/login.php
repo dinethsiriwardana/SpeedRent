@@ -1,34 +1,26 @@
 <?php
-include "dbcon.php";
-include "encryption.php";
+    include "dbcon.php";
+    include "encryption.php";
 
-session_start();
-
-
-$email =    $_POST["email"];
-//$password =  $_POST['password'];
-$password =  encryption($_POST["password"]);
+    session_start();
 
 
-$table = "user_accounts";
-$where = "email = '$email' AND password = '$password'";
-
-$select = "*";
-
+    $email =    $_POST["email"];
+    //$password =  $_POST['password'];
+    $password =  encryption($_POST["password"]);
 
 
+    $table = "user_accounts";
+    $where = "email = '$email' AND password = '$password'";
 
-// $sql = "SELECT * FROM user_accounts where password=$password";
-$sql = "SELECT $select FROM $table where $where";
-// $result = $conn->query($sql);
-// $result->num_rows == 1
-if ($result = $conn->query($sql)) {
-    $row = $result->fetch_assoc();
+    $select = "*";
 
-    echo $uid = $row["email"];
- 
-}
-else{
-    echo("\nno data");
-}
-?>    
+    $sql = "SELECT $select FROM $table where $where";
+    if ($result = $conn->query($sql)) {
+        $row = $result->fetch_assoc();
+
+        echo $uid = $row["email"];
+    } else {
+        echo ("\nno data");
+    }
+?>

@@ -54,45 +54,24 @@
             <div id="multple-step-form-n" class="container overflow-hidden" style="margin-top: 0px;margin-bottom: 10px;padding-bottom: 427px;padding-top: 57px;">
                 <div id="multistep-start-row" class="row" style="border-style: none;">
                     <div id="multistep-start-column" class="col-12 col-lg-8 m-auto">
-
-                        <form id="main-form" class="multisteps-form__form" action="php/update.php" method="post">
-                            <div id="single-form-next" class="multisteps-form__panel p-4 rounded bg-white js-active" data-animation="scaleIn" style="border-style: solid;border-color: var(--bs-gray-400);">
-
+                        <form id="main-form" class="multisteps-form__form">
+                            <div id="single-form-1" class="multisteps-form__panel p-4 rounded bg-white js-active" data-animation="scaleIn" style="border-style: solid;border-color: var(--bs-gray-400);">
                                 <h3 class="text-center multisteps-form__title" style="color: var(--bs-red);">Login Info</h3>
                                 <div id="form-content" class="multisteps-form__content">
                                     <div class="d-xl-flex flex-column justify-content-xl-center align-items-xl-center form-row mt-4" id="input-grp-double">
-                                        <div class="col-12 col-sm-6" style="margin-bottom: 15px;">
-                                          <input class="form-control multisteps-form__input" type="text" id="txtemail" placeholder="Email" name="email"> 
-                                          <div class="valid-feedback">
-                                            Looks good!
-                                          </div>
+                                        <div class="col-12 col-sm-6" style="margin-bottom: 15px;"><input class="form-control multisteps-form__input" type="text" id="txtemail" placeholder="Email" name="email"> <div class="valid-feedback">
+      Looks good!
+    </div></div>
+                                        <div class="col-12 col-sm-6" style="margin-bottom: 15px;"><input class="form-control multisteps-form__input" type="text" placeholder="User Name" name="username"></div>
+                                        <div class="col-12 col-sm-6 mt-4 mt-sm-0" style="margin-bottom: 15px;"><input class="form-control multisteps-form__input" type="text" id="txtpass" placeholder="Password" name="password"><!-- Start: Valid Lable --> <div id='txtpasslbl' class="invalid-feedback">
+ Must be at least 8 characters    </div><!-- End: Valid Lable -->
                                         </div>
-                                        <div class="col-12 col-sm-6" style="margin-bottom: 15px;">
-                                          <input class="form-control multisteps-form__input" type="text" placeholder="User Name" name="username">
+                                        <div class="col-12 col-sm-6 mt-4 mt-sm-0" style="margin-bottom: 15px;"><input class="form-control multisteps-form__input" type="text" id="txtpassagn" placeholder="Password Again" name="passwordagn" onkeypress="validation();"> <div class="
+            valid-feedback">
+      Looks good!
+    </div><!-- Start: Valid Lable --> <div id='txtpasslbl' class="invalid-feedback">
+Please make sure your passwords match.   </div><!-- End: Valid Lable -->
                                         </div>
-                                        <div class="col-12 col-sm-6 mt-4 mt-sm-0" style="margin-bottom: 15px;">
-                                            <input class="form-control multisteps-form__input" type="text" id="txtpass" placeholder="Password" name="password">
-                                            <!-- Start: Valid Lable --> 
-                                            <div id='txtpasslbl' class="invalid-feedback">
-                                              Must be at least 8 characters   
-                                            </div>
-                                            <!-- End: Valid Lable -->
-                                        </div>
-                                        <div class="col-12 col-sm-6 mt-4 mt-sm-0" style="margin-bottom: 15px;">
-                                          <input class="form-control multisteps-form__input" type="text" id="txtpassagn" placeholder="Password Again" name="passwordagn" onkeypress="validation();">
-                                          <div class="valid-feedback">
-                                            Looks good!
-                                          </div>
-                                          <!-- Start: Valid Lable --> 
-                                          <div id='txtpasslbl' class="invalid-feedback">
-                                            Please make sure your passwords match.   
-                                          </div>
-                                         <!-- End: Valid Lable -->
-                                        </div>
-                                        
-                                        
-                                        
-                                      
                                     </div>
                                     <div class="d-xl-flex justify-content-xl-end button-row d-flex mt-4" id="next-button"><button class="btn btn btn-primary ml-auto js-btn-next" id="btn-next" type="button" title="Next" style="width: 100px;background: var(--bs-red);border-style: none;">Next</button></div>
                                 </div>
@@ -101,8 +80,8 @@
                                 <h3 class="text-center multisteps-form__title">About</h3><!-- Start: 1 Row 2 Columns -->
                                 <div class="container">
                                     <div class="row">
-                                        <div class="col-md-6"><input class="form-control multisteps-form__input" type="text" placeholder="First name " name="fname"></div>
-                                        <div class="col-md-6"><input class="form-control multisteps-form__input" type="text" placeholder="Last name " name="lname"></div>
+                                        <div class="col-md-6"><input class="form-control multisteps-form__input" type="text" placeholder="First name "></div>
+                                        <div class="col-md-6"><input class="form-control multisteps-form__input" type="text" placeholder="Last name "></div>
                                     </div>
                                 </div><!-- End: 1 Row 2 Columns -->
                                 <div id="input-grp-single-1" class="form-row mt-4">
@@ -113,15 +92,6 @@
                                                 <div class="col-md-12"><input class="form-control multisteps-form__input" type="text" placeholder="Address" name="address"></div>
                                             </div>
                                         </div><!-- End: 1 Row 1 Column -->
-                                    </div>
-                                </div>
-                                <div id="input-grp-single-1" class="form-row mt-4">
-                                    <div class="col-12">
-                                        <div class="container">
-                                            <div class="row">
-                                                <div class="col-md-12"><input class="form-control multisteps-form__input" type="text" placeholder="Phone Number" name="phonenum"></div>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                                 <div id="input-grp-single-3" class="form-row mt-4">
@@ -156,9 +126,7 @@
     <script src="assets/js/bs-init.js"></script>
     <script src="assets/js/Multi-step-form.js"></script>
     <script src="assets/js/show_hide.js"></script>
-
     <script src="assets/js/validation.js"></script>
-
 </body>
 
 </html>

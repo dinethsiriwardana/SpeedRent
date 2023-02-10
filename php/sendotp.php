@@ -2,8 +2,6 @@
     include "dbcon.php";
     include "encryption.php";
 
-    session_start();
-
     function sendotp($conn)
     {
 
