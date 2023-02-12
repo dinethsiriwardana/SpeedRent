@@ -9,14 +9,13 @@
     $avb = 0;
 
     $sql = "INSERT INTO item_table (carid, car_name, car_model, details, price, availability)
-    VALUES ('$cid', '$cName', '$cModel', '$cDetails', '$cPrice', '$avb')";
+        VALUES ('$cid', '$cName', '$cModel', '$cDetails', '$cPrice', '$avb')";
 
     if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
+        echo "New record created successfully";
     } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+        echo "Error: " . $sql . "<br>" . $conn->error;
     }
 
     $conn->close();
-    
 ?>
