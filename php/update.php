@@ -1,7 +1,8 @@
-
 <?php
     include "dbcon.php";
     include "encryption.php";
+
+    session_start();
 
     $email = $_POST['email'];
 
@@ -13,8 +14,6 @@
     $result = $conn->query($sql);
 
     if ($result->num_rows == 1) {
-        echo "E mail address is already exists...!";
-    }else{
         $uname = $_POST['username'];
         $pwd = encryption($_POST['password']);
         $fname = $_POST['fname'];
@@ -22,14 +21,18 @@
         $add = $_POST['address'];
         $phnno = $_POST['phonenum'];
         $ID = $_POST['idno'];
-
-        $sql = "INSERT INTO user_accounts (email, user_name, password, fname, lname, address, phoneNo, idno)
-                VALUES ('$email', '$uname','$pwd', '$fname', '$lname', '$add', '$phnno', '$ID')";
-
-        if ($conn->query($sql) === TRUE) {
-            header("Location: ../login.html");
+        $updatesql = "UPDATE user_accounts SET user_name ='$uname',  password = '$pwd', fname = '$fname', lname = '$lname', address = '$add', phoneNo = '$phnno', idno = $ID WHERE email = '$email'";
+        
+        if ($conn->query($updatesql) === TRUE) {
+            echo "Record updated successfully";
         } else {
-            echo "Error: " . $sql . "<br>" . $conn->error;
+            echo "Error updating record " . $conn->error;
         }
-}
+
+    } else {
+        echo "E mail does not exists...!";
+    }
+    
+
 $conn->close();
+?>
