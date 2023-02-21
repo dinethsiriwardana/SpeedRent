@@ -6,9 +6,10 @@
 
     function sendotp($conn)
     {
+        $email = $_POST['email'];
 
         $table = "user_accounts";
-        $where = "email = 'hirudilmih@gmail.com'";
+        $where = "email = '$email'";
         $select = "*";
 
         // $sql = "SELECT $select FROM $table where $where";
@@ -31,8 +32,6 @@
         // else{
         //     echo "E mail does not exists...!";
         // }
-
-  
     }
     sendotp($conn);
     $conn->close();   
