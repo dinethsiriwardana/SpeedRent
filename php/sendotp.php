@@ -15,9 +15,6 @@
         // $sql = "SELECT $select FROM $table where $where";
         // $result = $conn->query($sql);
 
-
-        
-
         // if ($result->num_rows == 1)
         // {
             $otp = random_int(100000, 999999);
