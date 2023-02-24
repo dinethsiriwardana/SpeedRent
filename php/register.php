@@ -2,8 +2,6 @@
     include "dbcon.php";
     include "encryption.php";
 
-    session_start();
-
     $email = $_POST['email'];
 
     $table = "user_accounts";
