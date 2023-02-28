@@ -1,15 +1,16 @@
 <?php 
-echo '
+$aaa = 438990;
+echo "
 <!doctype html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml"
-    xmlns:o="urn:schemas-microsoft-com:office:office">
+<html xmlns='http://www.w3.org/1999/xhtml' xmlns:v='urn:schemas-microsoft-com:vml'
+    xmlns:o='urn:schemas-microsoft-com:office:office'>
 
 <head>
     <title></title><!--[if !mso]><!-->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"><!--<![endif]-->
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <style type="text/css">
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'><!--<![endif]-->
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+    <meta name='viewport' content='width=device-width,initial-scale=1'>
+    <style type='text/css'>
         #outlook a {
             padding: 0;
         }
@@ -51,15 +52,15 @@ echo '
   </xml>
   </noscript>
   <![endif]--><!--[if lte mso 11]>
-  <style type="text/css">
+  <style type='text/css'>
     .mj-outlook-group-fix { width:100% !important; }
   </style>
   <![endif]--><!--[if !mso]><!-->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700" rel="stylesheet" type="text/css">
-    <style type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700' rel='stylesheet' type='text/css'>
+    <style type='text/css'>
         @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700);
     </style><!--<![endif]-->
-    <style type="text/css">
+    <style type='text/css'>
         @media only screen and (min-width:480px) {
             .mj-column-per-100 {
                 width: 100% !important;
@@ -67,13 +68,13 @@ echo '
             }
         }
     </style>
-    <style media="screen and (min-width:480px)">
+    <style media='screen and (min-width:480px)'>
         .moz-text-html .mj-column-per-100 {
             width: 100% !important;
             max-width: 100%;
         }
     </style>
-    <style type="text/css">
+    <style type='text/css'>
         @media only screen and (max-width:480px) {
             table.mj-full-width-mobile {
                 width: 100% !important;
@@ -86,32 +87,32 @@ echo '
     </style>
 </head>
 
-<body style="word-spacing:normal;background-color:#fafbfc;">
-    <div style="background-color:#fafbfc;">
-        <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
-        <div style="margin:0px auto;max-width:600px;">
-            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+<body style='word-spacing:normal;background-color:#fafbfc;'>
+    <div style='background-color:#fafbfc;'>
+        <!--[if mso | IE]><table align='center' border='0' cellpadding='0' cellspacing='0' class='' style='width:600px;' width='600' ><tr><td style='line-height:0px;font-size:0px;mso-line-height-rule:exactly;'><![endif]-->
+        <div style='margin:0px auto;max-width:600px;'>
+            <table align='center' border='0' cellpadding='0' cellspacing='0' role='presentation' style='width:100%;'>
                 <tbody>
                     <tr>
                         <td
-                            style="direction:ltr;font-size:0px;padding:20px 0;padding-bottom:20px;padding-top:20px;text-align:center;">
-                            <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:middle;width:600px;" ><![endif]-->
-                            <div class="mj-column-per-100 mj-outlook-group-fix"
-                                style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:middle;width:100%;">
-                                <table border="0" cellpadding="0" cellspacing="0" role="presentation"
-                                    style="vertical-align:middle;" width="100%">
+                            style='direction:ltr;font-size:0px;padding:20px 0;padding-bottom:20px;padding-top:20px;text-align:center;'>
+                            <!--[if mso | IE]><table role='presentation' border='0' cellpadding='0' cellspacing='0'><tr><td class='' style='vertical-align:middle;width:600px;' ><![endif]-->
+                            <div class='mj-column-per-100 mj-outlook-group-fix'
+                                style='font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:middle;width:100%;'>
+                                <table border='0' cellpadding='0' cellspacing='0' role='presentation'
+                                    style='vertical-align:middle;' width='100%'>
                                     <tbody>
                                         <tr>
-                                            <td align="center"
-                                                style="font-size:0px;padding:25px;word-break:break-word;">
-                                                <table border="0" cellpadding="0" cellspacing="0" role="presentation"
-                                                    style="border-collapse:collapse;border-spacing:0px;">
+                                            <td align='center'
+                                                style='font-size:0px;padding:25px;word-break:break-word;'>
+                                                <table border='0' cellpadding='0' cellspacing='0' role='presentation'
+                                                    style='border-collapse:collapse;border-spacing:0px;'>
                                                     <tbody>
                                                         <tr>
-                                                            <td style="width:125px;"><img height="auto"
-                                                                    src="https://speedrent.live/assets/img/logo.png"
-                                                                    style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;"
-                                                                    width="125"></td>
+                                                            <td style='width:125px;'><img height='auto'
+                                                                    src='https://speedrent.live/assets/img/logo.png'
+                                                                    style='border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;'
+                                                                    width='125'></td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
@@ -125,60 +126,64 @@ echo '
                 </tbody>
             </table>
         </div>
-        <!--[if mso | IE]></td></tr></table><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" bgcolor="#ffffff" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
-        <div style="background:#ffffff;background-color:#ffffff;margin:0px auto;max-width:600px;">
-            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
-                style="background:#ffffff;background-color:#ffffff;width:100%;">
+        <!--[if mso | IE]></td></tr></table><table align='center' border='0' cellpadding='0' cellspacing='0' class='' style='width:600px;' width='600' bgcolor='#ffffff' ><tr><td style='line-height:0px;font-size:0px;mso-line-height-rule:exactly;'><![endif]-->
+        <div style='background:#ffffff;background-color:#ffffff;margin:0px auto;max-width:600px;'>
+            <table align='center' border='0' cellpadding='0' cellspacing='0' role='presentation'
+                style='background:#ffffff;background-color:#ffffff;width:100%;'>
                 <tbody>
                     <tr>
                         <td
-                            style="direction:ltr;font-size:0px;padding:20px 0;padding-bottom:20px;padding-top:20px;text-align:center;">
-                            <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:middle;width:600px;" ><![endif]-->
-                            <div class="mj-column-per-100 mj-outlook-group-fix"
-                                style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:middle;width:100%;">
-                                <table border="0" cellpadding="0" cellspacing="0" role="presentation"
-                                    style="vertical-align:middle;" width="100%">
+                            style='direction:ltr;font-size:0px;padding:20px 0;padding-bottom:20px;padding-top:20px;text-align:center;'>
+                            <!--[if mso | IE]><table role='presentation' border='0' cellpadding='0' cellspacing='0'><tr><td class='' style='vertical-align:middle;width:600px;' ><![endif]-->
+                            <div class='mj-column-per-100 mj-outlook-group-fix'
+                                style='font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:middle;width:100%;'>
+                                <table border='0' cellpadding='0' cellspacing='0' role='presentation'
+                                    style='vertical-align:middle;' width='100%'>
                                     <tbody>
                                         <tr>
-                                            <td align="center"
-                                                style="font-size:0px;padding:10px 25px;padding-right:25px;padding-left:25px;word-break:break-word;">
+                                            <td align='center'
+                                                style='font-size:0px;padding:10px 25px;padding-right:25px;padding-left:25px;word-break:break-word;'>
                                                 <div
-                                                    style="font-family:open Sans Helvetica, Arial, sans-serif;font-size:16px;line-height:1;text-align:center;color:#000000;">
+                                                    style='font-family:open Sans Helvetica, Arial, sans-serif;font-size:16px;line-height:1;text-align:center;color:#000000;'>
                                                     <span>Dear Customer,</span></div>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td align="center" 
-                                                style="font-size:0px;padding:10px 25px;padding-right:25px;padding-left:25px;word-break:break-word;text-align: justify;">
+                                            <td align='center' 
+                                                style='font-size:0px;padding:10px 25px;padding-right:25px;padding-left:25px;word-break:break-word;text-align: justify;'>
                                                 <div
-                                                    style="font-family:open Sans Helvetica, Arial, sans-serif;font-size:16px;line-height:1;text-align:center;color:#000000;">
+                                                    style='font-family:open Sans Helvetica, Arial, sans-serif;font-size:16px;line-height:1;text-align:center;color:#000000;'>
                                                     We have received a request to reset your password for your account on Speed Rent. <br>To continue with the password reset process, <br>we are sending you a one-time password (OTP).
 
     Please use the following OTP to verify your identity and reset your password</div>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td align="center"
-                                                style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                                            <td align='center'
+                                                style='font-size:0px;padding:10px 25px;word-break:break-word;'>
                                                 <div
-                                                    style="font-family:open Sans Helvetica, Arial, sans-serif;font-size:24px;font-weight:bold;line-height:1;text-align:center;color:#000000;">
-                                                    132435</div>
+                                                    style='font-family:open Sans Helvetica, Arial, sans-serif;font-size:24px;font-weight:bold;line-height:1;text-align:center;color:#000000;'>
+                                                     $aaa
+                                                    
+                                                    
+                                                    
+                                                    </div>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td align="center"
-                                                style="font-size:0px;padding:10px 25px;padding-right:16px;padding-left:25px;word-break:break-word;">
+                                            <td align='center'
+                                                style='font-size:0px;padding:10px 25px;padding-right:16px;padding-left:25px;word-break:break-word;'>
                                                 <div
-                                                    style="font-family:open Sans Helvetica, Arial, sans-serif;font-size:16px;line-height:1;text-align:center;color:#000000;">
+                                                    style='font-family:open Sans Helvetica, Arial, sans-serif;font-size:16px;line-height:1;text-align:center;color:#000000;'>
                                                     If you didnt request this, you can ignore this email or let us
                                                     know.</div>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td align="center"
-                                                style="font-size:0px;padding:10px 25px;padding-right:25px;padding-left:25px;word-break:break-word;">
+                                            <td align='center'
+                                                style='font-size:0px;padding:10px 25px;padding-right:25px;padding-left:25px;word-break:break-word;'>
                                                 <div
-                                                    style="font-family:open Sans Helvetica, Arial, sans-serif;font-size:16px;line-height:1;text-align:center;color:#000000;">
+                                                    style='font-family:open Sans Helvetica, Arial, sans-serif;font-size:16px;line-height:1;text-align:center;color:#000000;'>
                                                     Thanks!<br>Speed Rent team</div>
                                             </td>
                                         </tr>
@@ -202,4 +207,4 @@ echo '
     </div>
 </body>
 
-</html>';
+</html>";
