@@ -3,8 +3,9 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\SMTP;
+include "../encryption.php";
 
-function sendMail()
+function sendMail($receiver)
 {
     //Include required files
     require 'PHPMailer.php';
@@ -25,26 +26,19 @@ function sendMail()
     $subject = "Test mail using phpmailer";
 
     //mail body
-    $body = "
-    Dear Customer,
+    $body = "Speed Rent
+    Hi,
+    
+    We have received a request to reset your password for your account on Speed Rent. <br>To continue with the password reset process, <br>we are sending you a one-time password (OTP).
 
-    We have received a request to reset your password for your account on Speed Rent. To continue with the password reset process, we are sending you a one-time password (OTP).
-
-    Please use the following OTP to verify your identity and reset your password:
-
-                                    |     OTP: 666666     |
-
-    Please note that this OTP is only valid for the next 15 minutes. If you do not reset your password within this time, you will need to request a new OTP.
-    
-    If you did not request a password reset, please contact our customer support team immediately.
-    
-    Thank you for using Speed Rent.
-    
-    Best regards,
-    
-    [Your name]
-    
-    [Website/Service name] Support Team";
+    Please use the following OTP to verify your identity and reset your password,
+     --------
+    | ". decryption( $_COOKIE['OTP'])." |
+     --------
+    Regards,
+    Speed Rent
+ 
+    ";
 
     //receiver's mail
     $receiver = "shadow8netsw@gmail.com";
@@ -74,7 +68,7 @@ function sendMail()
     $mail->Subject = $subject;
     //email body
     $mail->Body = $body;
-    $mail->msgHTML(file_get_contents('otp.php'), __DIR__);
+    // $mail->msgHTML(file_get_contents('otp.php'), __DIR__);
 
 
     $email->Header = $headers;
@@ -91,4 +85,3 @@ function sendMail()
 }
 
 
-sendMail();
