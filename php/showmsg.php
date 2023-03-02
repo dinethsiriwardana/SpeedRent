@@ -9,8 +9,6 @@
     $tbl_accounts = 'user_accounts';
     $tbl_msg = 'msg_table';
 
-    // $sql = "SELECT $from, $msg FROM $tbl WHERE to_id = $to";
-
     $sql = "SELECT $tbl_accounts.$user, $tbl_msg.$msg FROM $tbl_accounts, $tbl_msg WHERE $tbl_msg.to_id = $to AND $from = $tbl_accounts.uid;";
 
     $result = $conn->query($sql);
