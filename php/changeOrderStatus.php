@@ -1,7 +1,7 @@
 <?php
     include 'dbcon.php';
 
-    $status = 'completed';
+    $status = 'Reject';
     $orderId = 20001;
 
     $sql = "UPDATE rent_order SET stts = '$status' WHERE orderid = $orderId";
