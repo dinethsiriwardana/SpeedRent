@@ -28,7 +28,7 @@
 
         if ($conn->query($sql) === TRUE) {
             sendSMS($phnno,$msg);
-            header("Location: ../login.html");
+            header("Location: ../login.php");
         } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
         }

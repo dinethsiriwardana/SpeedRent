@@ -54,12 +54,12 @@
                                     </div>
                                 </div>
                                 <div class="text-start mb-3"><input class="form-control" type="password" id="txtpass" name="password" placeholder="Password" onkeypress="validation();">
-                                    <div class="
-            valid-feedback">
+                                    <div class="valid-feedback">
                                         Looks good!
                                     </div><!-- Start: Valid Lable -->
                                     <div id='txtpasslbl' class="invalid-feedback">
-                                        Must be at least 8 characters </div><!-- End: Valid Lable -->
+                                        Must be at least 8 characters 
+                                    </div><!-- End: Valid Lable -->
                                 </div>
                                 <div class="mb-3"><button class="btn btn-primary d-block w-100" type="submit" style="background: var(--bs-red);border-style: none;">Login</button></div>
                                 <p class="text-end text-muted" style="font-size: 14px;margin-top: -9px;">Forgot
