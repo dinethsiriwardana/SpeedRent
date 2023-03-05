@@ -1,8 +1,6 @@
-
-
-    <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../assets/fonts/fontawesome-all.min.css">
-    <link rel="stylesheet" href="../../assets/css/styles.min.css">
+<link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../assets/fonts/fontawesome-all.min.css">
+<link rel="stylesheet" href="../../assets/css/styles.min.css">
 
 <div style="background: url(&quot;assets/img/6426002.jpg&quot;) center / cover no-repeat, var(--bs-red);height: 250px;">
     <div></div>
@@ -17,7 +15,30 @@
             <div class="d-md-none my-2"><button class="btn btn-light me-2" type="button">Button</button><button class="btn btn-primary" type="button">Button</button></div>
         </div>
         <div class="d-none d-md-block">
-            <a class="btn btn-light me-2" role="button" style="background: var(--bs-gray-200);" href="register.php">Register</a>
-            <a class="btn btn-primary" role="button" href="login.php" style="background: var(--bs-red);border-style: none;">Login</a></div>
-    </div>
+            <?php
+            if (!isset($_COOKIE['UID'])) {
+
+                echo '
+              <a class="btn btn-light me-2" role="button" style="background: var(--bs-gray-200);" href="register.php">Register</a>
+              <a class="btn btn-primary" role="button" href="login.php" style="background: var(--bs-red);border-style: none;">Login</a></div>';
+            } else {
+                echo '
+                <a class="btn btn-light me-2" role="button" style="background: var(--bs-gray-200);" href="car-order.php">Dashboard</a>
+                <a class="btn btn-primary" role="button" href="../logout.php" style="background: var(--bs-red);border-style: none;">Logout</a></div>';
+            }
+            ?>
+        </div>
 </nav><!-- End: Navbar Centered Brand -->
+
+
+<?php
+function checkLogged()
+{
+
+    if (isset($_COOKIE['UID'])) {
+
+        header("location: ./index.php");
+    }
+}
+
+?>

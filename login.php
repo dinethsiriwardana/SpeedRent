@@ -15,6 +15,7 @@
     <?php
 
     include "php/interface/navbar.php";
+    checkLogged();
     ?>
     <!-- Start: Login Form Basic -->
     <section class="position-relative py-4 py-xl-5">
@@ -62,8 +63,8 @@
                                     </div><!-- End: Valid Lable -->
                                 </div>
                                 <div class="mb-3"><button class="btn btn-primary d-block w-100" type="submit" style="background: var(--bs-red);border-style: none;">Login</button></div>
-                                <p class="text-end text-muted" style="font-size: 14px;margin-top: -9px;">Forgot
-                                    password?</p><!-- Start: Horizontal Line -->
+                                <a href="password_reset_email.html"><p class="text-end text-muted" style="font-size: 14px;margin-top: -9px;">Forgot
+                                    password?</p></a><!-- Start: Horizontal Line -->
                                 <div>
                                     <hr>
                                 </div><!-- End: Horizontal Line -->
