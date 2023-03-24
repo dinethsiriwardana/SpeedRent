@@ -9,13 +9,39 @@
     $tbl_accounts = 'user_accounts';
     $tbl_msg = 'msg_table';
 
-    $sql = "SELECT $tbl_accounts.$user, $tbl_msg.$msg FROM $tbl_accounts, $tbl_msg WHERE $tbl_msg.to_id = $to AND $from = $tbl_accounts.uid;";
+    $sql = "SELECT * FROM $tbl_msg WHERE to_id = $to";
 
     $result = $conn->query($sql);
     
     if ($result->num_rows > 0) {
       while($row = $result->fetch_assoc()) {
-        echo "<b>".$row[$user]. "</b> <br> &nbsp &nbsp &nbsp" . $row[$msg]."<br>";
+        echo '
+        <div class="row" style="margin-bottom: 15px;">
+        <div class="col-md-4 col-xl-3 col-xxl-3 d-xxl-flex align-items-xxl-center">
+            <div>
+                <h6 class="text-muted mb-2" style="font-size: 15px;color: rgba(0,0,0,0.25);">User ID</h6>
+                <h4 style="font-size: 25px;">'.$row['from_id'].'</h4>
+            </div>
+        </div>
+        <div class="col-md-4 col-xxl-4 d-xxl-flex align-items-xxl-center">
+            <div>
+                <h6 class="text-muted mb-2" style="font-size: 15px;color: rgba(0,0,0,0.25);">About</h6>
+                <h4 style="font-size: 25px;">'.$row['title'].'</h4>
+            </div>
+        </div>
+        <div class="col-md-4 col-xxl-4 d-xxl-flex align-items-xxl-center">
+            <div>
+                <h6 class="text-muted mb-2" style="font-size: 15px;color: rgba(0,0,0,0.25);">Date</h6>
+                <h4 style="font-size: 25px;">23-03-2023</h4>
+            </div>
+        </div>
+        <div class="col-md-4 col-lg-12 col-xl-1 col-xxl-1 d-xl-flex d-xxl-flex align-items-xl-center align-items-xxl-center" style="padding-left: 1px;margin-bottom: -12px;">
+            <div class="d-flex justify-content-center"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right-circle-fill" style="font-size: 38px;color: var(--bs-red);">
+                    <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"></path>
+                </svg></div>
+        </div>
+    </div>
+        ';
       }
     } else {
       echo'
