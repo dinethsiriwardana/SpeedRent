@@ -1,5 +1,5 @@
 <?php
-include "php/dbcon.php" ;
+include "php/dbcon.php";
 // include "php/dbcon.php" ;
 // include "php/car_order/car_order_details.php";
 
@@ -20,9 +20,9 @@ include "php/dbcon.php" ;
 
 <body>
     <!-- Start: Navbar Centered Brand -->
-  <?php
-  include "php/interface/navbar_user.php" ;
-  ?>
+    <?php
+    include "php/interface/navbar_user.php";
+    ?>
     <h1 style="text-align: center;color: var(--bs-red);margin-top: 0pc;padding-top: 50px;padding-bottom: 50px;">Rent
         Now...</h1>
     <div class="container" style="padding: 15px;padding-top: 15px;width: 95%;max-width: 100%;padding-right: 25px;padding-left: 25px;border-radius: 10px;border-style: solid;border-color: rgba(33,37,41,0.21);margin-bottom: 47px;margin-top: 15px;">
@@ -80,11 +80,10 @@ include "php/dbcon.php" ;
                             <div class="col d-xl-flex flex-column justify-content-xl-center align-items-xl-start">
                                 <h6 class="text-muted mb-2" style="font-size: 15px;color: rgba(0,0,0,0.25);">From&nbsp;
                                 </h6>
-                                <select style="height: 35px;padding-left: 5px;width: 100%;">
-                                    <optgroup label="This is a group" id="fromDate">
+                                <select style="height: 35px;padding-left: 5px;width: 100%;" id="fromDate">
+                                    <optgroup label="This is a group">
+                                        <!-- getData.js -->
 
-                               
-                                 
                                     </optgroup>
                                 </select>
                                 <div class="form-check">
@@ -94,13 +93,18 @@ include "php/dbcon.php" ;
                                     </label>
                                 </div>
                             </div>
-                            <div class="col d-xl-flex flex-column justify-content-xl-start align-items-xl-start justify-content-xxl-start visible" >
+                            <div class="col d-xl-flex flex-column justify-content-xl-start align-items-xl-start justify-content-xxl-start visible">
                                 <h6 class="text-muted mb-2" style="font-size: 15px;color: rgba(0,0,0,0.25);">To</h6>
                                 <select style="width: 100%;height: 35px;padding-left: 5px;" id="orderformoredays" disabled>
                                     <optgroup label="This is a group" id="toDate">
-                                      
+
                                     </optgroup>
                                 </select>
+                            </div>
+                        </div>
+                        <div class="row" style="width: 100%;padding-bottom: 0px;">
+                            <div class="col d-xl-flex flex-column justify-content-xl-center align-items-xl-start">
+                                <div id="error-alert" class="alert alert-danger alert-dismissible" role="alert" style="width: 100%;"><button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"></button><span><strong>Error:</strong> This car has been ordered during that time period..</span></div>
                             </div>
                         </div>
                         <div class="row" style="width: 100%;padding-bottom: 20px;">
@@ -141,14 +145,8 @@ include "php/dbcon.php" ;
     <!-- <script src="assets/js/script.min.js"></script> -->
     <script src="php/car_order/getData.js"></script>
     <script>
-        const checkbox = document.getElementById('orderformoredayscheckbox');
-        const select = document.getElementById('orderformoredays');
-        select.disabled; 
 
-        checkbox.addEventListener('change', function() {
-            select.disabled = !checkbox.checked;
-        });
-       
+
     </script>
 </body>
 
