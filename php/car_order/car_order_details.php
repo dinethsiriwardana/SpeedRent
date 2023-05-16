@@ -14,7 +14,8 @@ function compareArrays($arr1, $arr2)
     return $difference;
 }
 
-function setSelectbox(){
+function setSelectbox($carId)
+{
 
     include "../dbcon.php";
     if ($conn->connect_error) {
@@ -23,10 +24,13 @@ function setSelectbox(){
     date_default_timezone_set("Asia/Colombo");
     $todayDate =  (date('Y-m-d'));
     $getdatearray = [];
-    
-    $sql = "SELECT * FROM rent_order WHERE date_from >= '$todayDate' AND carid = 30001";
+
+    $sql = "SELECT * FROM rent_order WHERE date_from >= '$todayDate' AND carid = $carId";
+
+
+
     $result = $conn->query($sql);
-    var_dump($result);
+    // var_dump($result);
 
     if ($result->num_rows > 0) {
 
@@ -65,6 +69,9 @@ function setSelectbox(){
         echo "<option value = '$value'>$value</option>";
     }
 }
-setSelectbox();
 
-?>
+if (isset($_GET['carId'])) {
+    setSelectbox($_GET['carId']);
+} else {
+    echo "<script>console.log('!isset')</script>";
+}

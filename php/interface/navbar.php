@@ -24,7 +24,7 @@
             } else {
                 echo '
                 <a class="btn btn-light me-2" role="button" style="background: var(--bs-gray-200);" href="car-order.php">Dashboard</a>
-                <a class="btn btn-primary" role="button" href="../logout.php" style="background: var(--bs-red);border-style: none;">Logout</a></div>';
+                <a class="btn btn-primary" role="button" href="php/logout.php" style="background: var(--bs-red);border-style: none;">Logout</a></div>';
             }
             ?>
         </div>
