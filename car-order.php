@@ -27,7 +27,6 @@ include "php/dbcon.php";
     include "php/log.php";
     include "php/encryption.php";
 
-    $dclientids = explode(",", decryption($_COOKIE['UID']));
     // echo $uid = $dclientids[0];
 
     $carid = $_GET["carid"];

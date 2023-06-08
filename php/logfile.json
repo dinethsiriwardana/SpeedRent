@@ -283,5 +283,10 @@
         "filename": "\/Users\/dineth\/Documents\/Dineth\/Programming\/Web\/htdocs\/ecom\/car-order.php",
         "timestamp": 1684070786,
         "message": "SELECT * FROM car_table WHERE carid = 30001"
+    },
+    {
+        "filename": "\/Users\/dineth\/Documents\/Dineth\/Programming\/Web\/htdocs\/ecom\/car-order.php",
+        "timestamp": 1684211562,
+        "message": "SELECT * FROM car_table WHERE carid = "
     }
 ]
