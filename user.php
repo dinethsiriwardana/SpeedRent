@@ -1,5 +1,6 @@
 <?php
 include "php/showmsg.php";
+include "php/log.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,6 +26,7 @@ include "php/showmsg.php";
         <div class="row d-xxl-flex align-items-xxl-center" style="padding-bottom: 15px;padding-top: 10px;">
             <div class="col">
 
+                <?php include "./php/users/show_orders.php" ?>
 
             </div>
         </div>
