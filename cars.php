@@ -1,3 +1,6 @@
+<?php
+include "php/log.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,6 +36,7 @@
         <div class="row row-cols-sm-1 row-cols-md-1 row-cols-lg-2 row-cols-xl-2 row-cols-xxl-2" style="margin-top: 70px;margin-right: -18px;">
             <!-- Start: Filter <item> Col -->
             <div class="col-lg-3 col-xl-3 col-xxl-2">
+
                 <form action="cars.php" method="get">
                     <div style="border-radius: 10px;box-shadow: 0px 0px 14px 0px rgba(33,37,41,0.04);border-style: solid;border-color: var(--bs-gray-200);padding-right: 20px;padding-left: 20px;color: rgba(33,37,41,0.8);padding-bottom: 22px;margin-bottom: 50px;">
                         <h1 style="text-align: center;font-size: 30px;margin-top: 30px;color: var(--bs-red);">Filters</h1>
@@ -71,10 +75,12 @@
 
             <!-- </div> -->
             <!-- End: Filter <item> Col -->
+
             <!-- Start: <Filter> Item Col -->
             <div class="col-lg-9 col-xl-9 col-xxl-10" style="margin-top: -5px;">
                 <div class="container" style="margin-top: 0px;">
                     <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-2 row-cols-xl-2 row-cols-xxl-2 justify-content-between" style="display: flex;margin-right: -12px;margin-top: 8px;margin-bottom: 20px;">
+
                         <!-- Start: Item Col -->
                         <?php include "php/showCars/showcars.php" ?>;
                     </div>
