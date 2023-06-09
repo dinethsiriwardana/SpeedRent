@@ -36,71 +36,57 @@ include "php/log.php";
         <div class="row row-cols-sm-1 row-cols-md-1 row-cols-lg-2 row-cols-xl-2 row-cols-xxl-2" style="margin-top: 70px;margin-right: -18px;">
             <!-- Start: Filter <item> Col -->
             <div class="col-lg-3 col-xl-3 col-xxl-2">
-                <div style="border-radius: 10px;box-shadow: 0px 0px 14px 0px rgba(33,37,41,0.04);border-style: solid;border-color: var(--bs-gray-200);padding-right: 20px;padding-left: 20px;color: rgba(33,37,41,0.8);padding-bottom: 22px;margin-bottom: 50px;">
-                    <h1 style="text-align: center;font-size: 30px;margin-top: 30px;color: var(--bs-red);">Filters</h1>
-                    <hr>
-                    <div class="col"><small style="font-size: 25px;">Brand</small>
-                        <div class="form-check" style="margin-bottom: 5px;margin-top: 20px;"><input class="form-check-input" type="checkbox" id="formCheck-1"><label class="form-check-label" for="formCheck-1">AUDI</label></div>
-                        <div class="form-check" style="margin-bottom: 5px;"><input class="form-check-input" type="checkbox" id="formCheck-4"><label class="form-check-label" for="formCheck-4">Vitz</label></div>
-                        <div class="form-check" style="margin-bottom: 5px;"><input class="form-check-input" type="checkbox" id="formCheck-3"><label class="form-check-label" for="formCheck-3">BMW</label></div>
-                        <div class="form-check" style="margin-bottom: 5px;"><input class="form-check-input" type="checkbox" id="formCheck-2"><label class="form-check-label" for="formCheck-2">Passo</label>
+
+                <form action="cars.php" method="get">
+                    <div style="border-radius: 10px;box-shadow: 0px 0px 14px 0px rgba(33,37,41,0.04);border-style: solid;border-color: var(--bs-gray-200);padding-right: 20px;padding-left: 20px;color: rgba(33,37,41,0.8);padding-bottom: 22px;margin-bottom: 50px;">
+                        <h1 style="text-align: center;font-size: 30px;margin-top: 30px;color: var(--bs-red);">Filters</h1>
+                        <hr>
+                        <div class="col">
+                            <small style="font-size: 25px;">Brand</small>
+                            <div class="form-check" style="margin-bottom: 5px;margin-top: 20px;">
+                                <input class="form-check-input" type="checkbox" id="formCheck-1" name="brand[]" value="Audi">
+                                <label class="form-check-label" for="formCheck-1">Audi</label>
+                            </div>
+                            <div class="form-check" style="margin-bottom: 5px;">
+                                <input class="form-check-input" type="checkbox" id="formCheck-4" name="brand[]" value="Toyota">
+                                <label class="form-check-label" for="formCheck-4">Toyota</label>
+                            </div>
+                            <div class="form-check" style="margin-bottom: 5px;">
+                                <input class="form-check-input" type="checkbox" id="formCheck-3" name="brand[]" value="BMW">
+                                <label class="form-check-label" for="formCheck-3">BMW</label>
+                            </div>
+                            <div class="form-check" style="margin-bottom: 5px;">
+                                <input class="form-check-input" type="checkbox" id="formCheck-2" name="brand[]" value="Mercedes-Benz">
+                                <label class="form-check-label" for="formCheck-2">Mercedes-Benz</label>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="col">
+                            <small style="font-size: 25px;">Price</small>
+                        </div>
+                        <div class="col">
+                            <input class="form-control-sm" type="number" name="maxprice" min="0" step="10" placeholder="Max " style="width: 100%;height: 37px;border-color: rgba(0,0,0,0.13);border-radius: 5px;margin-top: 10px;margin-left: 0px;">
+                            <input class="form-control-sm" type="number" name="minprice" min="0" step="10" placeholder="Min " style="width: 100%;height: 37px;border-color: rgba(0,0,0,0.13);border-radius: 5px;margin-top: 20px;margin-right: 18px;">
+                            <button class="btn btn-primary" style="background: var(--bs-red);border-style: none;margin-top: 15px;width: 100%;">Search</button>
                         </div>
                     </div>
-                    <hr>
-                    <div class="col">
-                        <small style="font-size: 25px;">Price</small>
-                    </div>
-                    <div class="col">
-                        <input class="form-control-sm" type="number" name="minprice" min="0" step="10" placeholder="Max " style="width: 100%;height: 37px;border-color: rgba(0,0,0,0.13);border-radius: 5px;margin-top: 10px;margin-left: 0px;">
-                        <input class="form-control-sm" type="number" name="minprice" min="0" step="10" placeholder="Min " style="width: 100%;height: 37px;border-color: rgba(0,0,0,0.13);border-radius: 5px;margin-top: 20px;margin-right: 18px;">
-                        <button class="btn btn-primary" style="background: var(--bs-red);border-style: none;margin-top: 15px;width: 100%;">Search</button>
-                    </div>
-                </div>
-            </div><!-- End: Filter <item> Col -->
+                </form>
+            </div>
+
+            <!-- </div> -->
+            <!-- End: Filter <item> Col -->
+
             <!-- Start: <Filter> Item Col -->
             <div class="col-lg-9 col-xl-9 col-xxl-10" style="margin-top: -5px;">
                 <div class="container" style="margin-top: 0px;">
                     <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-2 row-cols-xl-2 row-cols-xxl-2 justify-content-between" style="display: flex;margin-right: -12px;margin-top: 8px;margin-bottom: 20px;">
+
                         <!-- Start: Item Col -->
-                        <div class="col-6" data-bss-hover-animate="pulse" style="box-shadow: 0px 0px 6px rgba(33,37,41,0.12);padding: 30px;padding-right: 30px;padding-left: 20px;padding-top: 30px;padding-bottom: 30px;border-radius: 10px;margin: 0;width: 49%;border: 1.5px solid var(--bs-gray-200);margin-bottom: 20px;">
-                            <div class="row">
-                                <div class="col-xl-12 col-xxl-8">
-                                    <h1 class="text-start" style="font-size: 175%;color: var(--bs-red);">Toyota Vits - 2020</h1>
-                                </div>
-                                <div class="col-xl-12 col-xxl-4"><small class="d-xl-flex justify-content-xl-end" style="font-size: 23px;color: rgba(33,37,41,0.64);">4.5/5.0</small><small class="d-xl-flex justify-content-xl-end align-items-xl-center" style="font-size: 15px;margin-top: -12px;color: rgba(33,37,41,0.52);"></small></div>
-                            </div>
-                            <div class="row">
-                                <div class="col-xxl-5" style="width: 50%;"><img src="assets/img/2500611.webp" width="80%" style="width: 100%;"></div>
-                                <div class="col-xxl-5" style="width: 50%;"><small class="d-xl-flex justify-content-xl-end" style="font-size: 30px;">$50.00</small><small class="d-xl-flex justify-content-xl-end align-items-xl-center" style="font-size: 15px;margin-top: -12px;color: rgba(33,37,41,0.52);">per day</small>
-                                    <p style="margin-bottom: 0px;text-align: right;">Fuel Type - Petrol<br>No. of Seats - 5</p>
-                                    <div class="row">
-                                        <div class="col d-xxl-flex justify-content-xxl-end" style="padding-right: 3px;"><button class="btn btn-primary" style="background: var(--bs-red);border-style: none;margin-top: 15px;width: 49%;">Rent</button></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End: Item Col -->
-                        <!-- Start: Item Col -->
-                        <div class="col-6" data-bss-hover-animate="pulse" style="box-shadow: 0px 0px 6px rgba(33,37,41,0.12);padding: 30px;padding-right: 30px;padding-left: 20px;padding-top: 30px;padding-bottom: 30px;border-radius: 10px;margin: 0;width: 49%;border: 1.5px solid var(--bs-gray-200);margin-bottom: 20px;">
-                            <div class="row">
-                                <div class="col-xl-12 col-xxl-8">
-                                    <h1 class="text-start" style="font-size: 175%;color: var(--bs-red);">Toyota Vits - 2020</h1>
-                                </div>
-                                <div class="col-xl-12 col-xxl-4"><small class="d-xl-flex justify-content-xl-end" style="font-size: 23px;color: rgba(33,37,41,0.64);">4.5/5.0</small><small class="d-xl-flex justify-content-xl-end align-items-xl-center" style="font-size: 15px;margin-top: -12px;color: rgba(33,37,41,0.52);"></small></div>
-                            </div>
-                            <div class="row">
-                                <div class="col-xxl-5" style="width: 50%;"><img src="assets/img/2500611.webp" width="80%" style="width: 100%;"></div>
-                                <div class="col-xxl-5" style="width: 50%;"><small class="d-xl-flex justify-content-xl-end" style="font-size: 30px;">$50.00</small><small class="d-xl-flex justify-content-xl-end align-items-xl-center" style="font-size: 15px;margin-top: -12px;color: rgba(33,37,41,0.52);">per day</small>
-                                    <p style="margin-bottom: 0px;text-align: right;">Fuel Type - Petrol<br>No. of Seats - 5</p>
-                                    <div class="row">
-                                        <div class="col d-xxl-flex justify-content-xxl-end" style="padding-right: 3px;"><button class="btn btn-primary" style="background: var(--bs-red);border-style: none;margin-top: 15px;width: 49%;">Rent</button></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- End: Item Col -->
+                        <?php include "php/showCars/showcars.php" ?>;
                     </div>
                 </div>
             </div><!-- End: <Filter> Item Col -->
+            </div>
         </div>
     </div><!-- End: 1 Row 2 Columns -->
     <script src="assets/js/jquery.min.js"></script>
