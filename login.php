@@ -35,9 +35,9 @@
                                     </path>
                                 </svg></div>
                             <form class="text-center" method="post" onsubmit="return validation()" action="php/login_backend.php" style="width: 80%;">
-                            <?php 
-                           if(isset($_GET['error'])) {
-                            echo '
+                                <?php
+                                if (isset($_GET['error'])) {
+                                    echo '
                                 <div class="alert alert-danger alert-dismissible" role="alert">
                                     <button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close">
                                     </button>
@@ -45,9 +45,8 @@
                                        
                                     Username or password is incorrect
                                     </span>
-                                </div>
-';
-                           }
+                                </div>';
+                                }
                                 ?>
                                 <div class="text-start mb-3"><input class="form-control" type="text" id="txtemail" name="email" placeholder="Email" autofocus="" autocomplete="on">
                                     <div class="valid-feedback">
@@ -59,7 +58,7 @@
                                         Looks good!
                                     </div><!-- Start: Valid Lable -->
                                     <div id='txtpasslbl' class="invalid-feedback">
-                                        Must be at least 8 characters 
+                                        Must be at least 8 characters
                                     </div><!-- End: Valid Lable -->
                                 </div>
                                 <div class="mb-3"><button class="btn btn-primary d-block w-100" type="submit" style="background: var(--bs-red);border-style: none;">Login</button></div>
@@ -69,7 +68,7 @@
                                     <hr>
                                 </div><!-- End: Horizontal Line -->
                                 <p class="text-center text-muted" style="font-size: 17px;margin-top: -9px;">No Account ?
-                                    <a href="register.html">Register</a>&nbsp;
+                                    <a href="register.php">Register</a>&nbsp;
                                 </p>
                             </form>
                         </div>

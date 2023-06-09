@@ -1,5 +1,5 @@
 <?php
-    include "php/showmsg.php";
+include "php/showmsg.php";
 ?>
 
 <!DOCTYPE html>
@@ -179,13 +179,15 @@
         <div class="col" style="padding: 15px;padding-top: 15px;width: 95%;max-width: 100%;padding-right: 15px;padding-left: 15px;border-style: solid;border-color: rgba(33,37,41,0.21);border-radius: 10px;margin: 5px;">
             <h1 style="text-align: center;color: var(--bs-red);font-size: 30px;margin-bottom: 12px;">Messages..</h1><!-- Start: User Massege -->
             <div class="container" style="border-bottom-style: solid;border-bottom-color: rgba(33,37,41,0.21);padding-bottom: 3px;padding-top: 5px;">
-               <?php
-               show_msg();
-               ?>
+                <?php
+                show_msg();
+                ?>
             </div>
             <!-- End: User Massege -->
             <!-- Start: See More Button -->
-            <div class="container d-flex d-lg-flex d-xl-flex d-xxl-flex justify-content-end justify-content-lg-end justify-content-xl-end justify-content-xxl-end" style="padding-bottom: 3px;padding-top: 15px;border-bottom-style: none;border-bottom-color: rgba(33,37,41,0.21);"><button class="btn btn-success" type="button">See All Messages</button></div><!-- End: See More Button -->
+            <div class="container d-flex d-lg-flex d-xl-flex d-xxl-flex justify-content-end justify-content-lg-end justify-content-xl-end justify-content-xxl-end" style="padding-bottom: 3px;padding-top: 15px;border-bottom-style: none;border-bottom-color: rgba(33,37,41,0.21);">
+                <button class="btn btn-success" type="button" onclick="window.location.href='/admin-msg.html'">See All Messages</button>
+            </div><!-- End: See More Button -->
         </div>
     </div>
     <div class="row" style="margin-right: 35px;margin-left: 35px;margin-bottom: 30px;">
@@ -202,7 +204,7 @@
         <div class="col" style="padding: 15px;padding-top: 15px;width: 95%;max-width: 100%;padding-right: 15px;padding-left: 15px;border-style: solid;border-color: rgba(33,37,41,0.21);border-radius: 10px;margin: 5px;height: 225.5px;">
             <h1 style="text-align: center;color: var(--bs-red);font-size: 30px;">Messages..</h1>
             <?php
-                // show_msg();
+            // show_msg();
             ?>
         </div><!-- End: Our Cars - No Cars -->
     </div>
