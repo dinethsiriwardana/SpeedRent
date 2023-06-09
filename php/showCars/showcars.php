@@ -1,10 +1,30 @@
 <?php
-    include "./php/dbcon.php";
-
+    include "../dbcon.php";
+    
+    isset($_GET['brand']) ? $_GET['brand'] : '';
+    isset($_GET['minprice']) ? $_GET['minprice'] : '';
+    isset($_GET['maxprice']) ? $_GET['maxprice'] : '';
     
 
-    $sql="SELECT carid,car_brand,car_model,price,availability from car_table ORDER BY car_model ASC";
-    $result = mysqli_query($conn, $sql);
+
+   // $sql="SELECT carid,car_brand,car_model,price,availability from car_table ORDER BY car_model ASC";
+   $sql = "SELECT carid, car_brand, car_model, price, availability FROM car_table WHERE 1=1";
+
+        if (!empty($brand)) {
+            $sql .= " AND car_brand = '$brand'";
+        }
+
+        if (!empty($minPrice)) {
+            $sql .= " AND price >= $minPrice";
+        }
+
+        if (!empty($maxPrice)) {
+            $sql .= " AND price <= $maxPrice";
+        }
+
+        $sql .= " ORDER BY car_model ASC";
+
+        $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) 
 {
