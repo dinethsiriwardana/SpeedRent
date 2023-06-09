@@ -37,3 +37,4 @@
 
         return $decryption;
     }
+// echo encryption("admin123");
