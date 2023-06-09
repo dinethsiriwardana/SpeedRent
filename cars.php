@@ -51,13 +51,13 @@
             <div class="col-lg-9 col-xl-9 col-xxl-10" style="margin-top: -5px;">
                 <div class="container" style="margin-top: 0px;">
                     <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-2 row-cols-xl-2 row-cols-xxl-2 justify-content-between" style="display: flex;margin-right: -12px;margin-top: 8px;margin-bottom: 20px;">
+
                         <!-- Start: Item Col -->
                         <?php include "php/showCars/order.php" ?>;
 
                         <!-- End: Item Col --> 
                        
-                        <!-- Start: Item Col -->
-                       
+
                     </div>
                 </div>
             </div><!-- End: <Filter> Item Col -->
