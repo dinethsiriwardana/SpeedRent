@@ -1,3 +1,6 @@
+<?php
+    include "php/showmsg.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -136,11 +139,10 @@
         <!-- Start: Our Cars - No Cars -->
         <div class="col" style="padding: 15px;padding-top: 15px;width: 95%;max-width: 100%;padding-right: 15px;padding-left: 15px;border-style: solid;border-color: rgba(33,37,41,0.21);border-radius: 10px;margin: 5px;height: 225.5px;">
             <h1 style="text-align: center;color: var(--bs-red);font-size: 30px;">Messages..</h1>
-            <div class="container d-flex d-xxl-flex justify-content-center align-items-center justify-content-xxl-center align-items-xxl-end" style="height: 98px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-192 0 512 512" width="1em" height="1em" fill="currentColor" style="font-size: 56px;color: var(--bs-gray-500);">
-                    <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
-                    <path d="M64 352c17.69 0 32-14.32 32-31.1V64.01c0-17.67-14.31-32.01-32-32.01S32 46.34 32 64.01v255.1C32 337.7 46.31 352 64 352zM64 400c-22.09 0-40 17.91-40 40s17.91 39.1 40 39.1s40-17.9 40-39.1S86.09 400 64 400z"></path>
-                </svg></div>
-            <div class="container d-flex d-xxl-flex justify-content-center justify-content-xxl-center"><small style="color: var(--bs-gray-500);">No Messages</small></div>
+            
+            <?php
+                show_msg();
+            ?>
         </div><!-- End: Our Cars - No Cars -->
     </div>
     <div class="row" style="border-style: solid;border-color: rgba(33,37,41,0.21);border-radius: 10px;margin: 5px;padding-top: 10px;">
