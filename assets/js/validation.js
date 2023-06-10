@@ -1,7 +1,6 @@
 var txtemail = document.getElementById('txtemail');
 var txtpass = document.getElementById('txtpass');
 
-
 function validation(){
     
     if (txtemail.value.length == 0) {
@@ -16,9 +15,5 @@ function validation(){
     }else{
          txtpass.classList.remove('is-invalid');
           txtpass.classList.add('is-valid');
-
     }
-       
-       
-
 }
