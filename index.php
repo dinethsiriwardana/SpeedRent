@@ -14,11 +14,11 @@
 </head>
 
 <body style="border-style: none;border-color: white;">
-   <?php
+    <?php
     include "landing_page.php";
 
-    include "php/interface/navbar.php" ;
-   ?>
+    include "php/interface/navbar.php";
+    ?>
     <div class="container">
         <h1 class="text-center" style="margin-top: 23px;">Our Latest ....</h1>
     </div><!-- Start: Pretty Product List -->
