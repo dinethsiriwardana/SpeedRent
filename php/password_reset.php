@@ -1,14 +1,13 @@
 <?php
     include "dbcon.php";
     include "encryption.php";
-    include "SendSMS.php";
 
 
-    $cookieotp = decryption($_COOKIE['OTP']);
-    $cookieemail = decryption($_COOKIE['email']);
-    $phnno = decryption($_COOKIE['PN']);
+    $passwordagn =  $_POST['passwordagn'];
 
-    if ($cookieotp == 'done') {
+    $table = "user_accounts";
+    $where = "email = $email";
+    $set = "password = $passwordagn";
     
         $passwordagn =  encryption($_POST['passwordagn']);
     
@@ -27,6 +26,7 @@
         }
     }else{     
                header("Location: ../password_reset_email.html");
+
     }
     
 ?>
