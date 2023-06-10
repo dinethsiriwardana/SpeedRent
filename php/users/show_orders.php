@@ -12,7 +12,7 @@ $dclientids = explode(",", decryption($_COOKIE['UID']));
 $uid = $dclientids[0];
 
 
-$sql = "SELECT * FROM rent_order,car_table WHERE rent_order.uid = $uid and rent_order.carid = car_table.carid";
+$sql = "SELECT * FROM rent_order,car_table WHERE rent_order.uid = $uid and rent_order.carid = car_table.carid  order by date_from";
 
 $result = $conn->query($sql);
 
