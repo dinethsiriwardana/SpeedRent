@@ -69,10 +69,19 @@ include "php/log.php";
             <div class="row">
                 <div class="col d-lg-flex d-xl-flex d-xxl-flex justify-content-lg-start justify-content-xl-start justify-content-xxl-start">
                     <!-- Start: Search Input (responsive) -->
-                    <div class="float-start float-md-end d-xxl-flex justify-content-xxl-start mt-5 mt-md-0 search-area" style="margin-top: 7px;"><i class="fas fa-search float-start search-icon"></i><input class="float-start float-sm-end custom-search-input" type="search" placeholder="Type to filter by Username"></div><!-- End: Search Input (responsive) -->
+                    <div class="float-start float-md-end d-xxl-flex justify-content-xxl-start mt-5 mt-md-0 search-area" style="margin-top: 7px;">
+                        <h5>Send Message to the admin</h5>
+                    </div><!-- End: Search Input (responsive) -->
                 </div>
-            </div><textarea style="margin-top: 15px;width: 100%;height: 136px;border-radius: 5px;border-style: solid;border-color: rgba(0,0,0,0.22);"></textarea><!-- Start: See More Button -->
-            <div class="container d-flex d-xxl-flex justify-content-end justify-content-xxl-end" style="padding-bottom: 3px;padding-top: 15px;border-bottom-style: none;border-bottom-color: rgba(33,37,41,0.21);padding-right: 0px;"><button class="btn btn-success" type="button">Send Message</button></div><!-- End: See More Button -->
+            </div>
+            <form action="php/users/sendmsg.php" method="post">
+                <input class="form-control" type="text" id="" name="title" placeholder="Title" autofocus="" autocomplete="on">
+
+                <textarea name="msg" style="margin-top: 15px;width: 100%;height: 136px;border-radius: 5px;border-style: solid;border-color: rgba(0,0,0,0.22);"></textarea>
+                <div class="container d-flex d-xxl-flex justify-content-end justify-content-xxl-end" style="padding-bottom: 3px;padding-top: 15px;border-bottom-style: none;border-bottom-color: rgba(33,37,41,0.21);padding-right: 0px;">
+                    <button class="btn btn-success" type="submit">Send Message</button>
+                </div>
+            </form>
         </div>
     </div>
     <div class="row" style="margin-right: 35px;margin-left: 35px;margin-bottom: 30px;">
@@ -85,6 +94,7 @@ include "php/log.php";
                 </svg></div>
             <div class="container d-xl-flex d-xxl-flex justify-content-xl-center justify-content-xxl-center"><small style="color: var(--bs-gray-500);">No Cars</small></div>
         </div><!-- End: Our Cars - No Cars -->
+
         <!-- Start: Our Cars - No Cars -->
         <div class="col" style="padding: 15px;padding-top: 15px;width: 95%;max-width: 100%;padding-right: 15px;padding-left: 15px;border-style: solid;border-color: rgba(33,37,41,0.21);border-radius: 10px;margin: 5px;height: 225.5px;">
             <h1 style="text-align: center;color: var(--bs-red);font-size: 30px;">Messages..</h1>
