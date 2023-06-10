@@ -1,0 +1,9 @@
+<?php
+
+$path = "./php/";
+include $path . "dbcon.php";
+include $path . "encryption.php";
+
+$select="brand";
+$table="car_category";
+
