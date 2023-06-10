@@ -9,11 +9,13 @@ function validation(){
     }else{
          txtemail.classList.remove('is-invalid');
     }
+
     if (txtpass.value.length < 8) {
         txtpass.classList.add('is-invalid');
         return false;
     }else{
-         txtpass.classList.remove('is-invalid');
-          txtpass.classList.add('is-valid');
+        txtpass.classList.remove('is-invalid');
+        txtpass.classList.add('is-valid');
     }
 }
+
