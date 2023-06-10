@@ -61,9 +61,10 @@
                                                 Looks good!
                                             </div>
                                         </div>
-                                        <div class="col-12 col-sm-6" style="margin-bottom: 15px;"><input
-                                                class="form-control multisteps-form__input" type="text"
-                                                placeholder="User Name" name="username"></div>
+                                        <div class="col-12 col-sm-6" style="margin-bottom: 15px;">
+                                            <input class="form-control multisteps-form__input" type="text" placeholder="User Name" name="username" onchange="checkUsername(this.value)">
+                                           
+                                        </div>
                                         <div class="col-12 col-sm-6 mt-4 mt-sm-0" style="margin-bottom: 15px;"><input
                                                 class="form-control multisteps-form__input" type="password" id="txtpass"
                                                 placeholder="Password" name="password"><!-- Start: Valid Lable -->
@@ -78,7 +79,8 @@
                                                 Looks good!
                                             </div><!-- Start: Valid Lable -->
                                             <div id='txtpasslbl' class="invalid-feedback">
-                                                Please make sure your passwords match. </div><!-- End: Valid Lable -->
+                                                Please make sure your passwords match.
+                                             </div><!-- End: Valid Lable -->
                                         </div>
                                     </div>
                                     <div class="d-xl-flex justify-content-xl-end button-row d-flex mt-4"
@@ -94,9 +96,9 @@
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-md-6"><input class="form-control multisteps-form__input"
-                                                type="text" placeholder="First name "></div>
+                                                type="text" placeholder="First name " name ="fname"></div>
                                         <div class="col-md-6"><input class="form-control multisteps-form__input"
-                                                type="text" placeholder="Last name "></div>
+                                                type="text" placeholder="Last name " name ="lname"></div>
                                     </div>
                                 </div><!-- End: 1 Row 2 Columns -->
                                 <div id="input-grp-single-1" class="form-row mt-4">
@@ -158,10 +160,29 @@
             </div>
         </section><!-- End: Multi step form -->
     </section><!-- End: Login Form Basic -->
+
+    
+<script>
+function checkUsername(username) {
+  if (username.includes(' ')) {
+    // Username contains spaces
+    alert('Username should not contain spaces.');
+    // You can perform additional error handling or take appropriate action here
+    cnfrmpwd.classList.remove('is-invalid');
+        cnfrmpwd.classList.add('is-valid');
+  } else {
+    // Username is valid
+    console.log('Username is valid.');
+    // You can proceed with further processing or validation
+  }
+}
+</script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/script.min.js"></script>
     <script src="js/validation.js"></script>
+    <script src="js/validate_reset_pwd.js"></script>
+
 </body>
 
 </html>

@@ -12,6 +12,32 @@
 </head>
 
 <body>
+    <?php
+        include "php/encryption.php";
+
+        $dclientids = explode(",", decryption($_COOKIE['UID']));
+        $uid = $dclientids[0];
+
+        include "php/dbcon.php";
+
+        $select = "*";
+        $table = "user_accounts";
+    
+        $sql = "SELECT $select FROM $table WHERE uid = $uid";
+
+        $result = $conn->query($sql);
+    
+        $userData = array(); // Initialize an empty array
+    
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                $userData = $row; // Assign the fetched row data to the array
+            }
+        }
+
+
+
+    ?>
     <!-- Start: Navbar Centered Brand -->
     <nav class="navbar navbar-light navbar-expand-md py-3" style="margin: 10px;margin-right: 10px;margin-left: 10px;margin-top: 16px;margin-bottom: 20px;background: #ffffff;border-color: var(--bs-white);border-radius: 16px;box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15);">
         <div class="container-fluid"><a class="navbar-brand d-flex align-items-center" href="index.html"><span class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center me-2 bs-icon" style="background: var(--bs-red);"><i class="fas fa-car"></i></span><span>SpeedRent</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-4"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
@@ -38,31 +64,31 @@
                         </div>
                         <div class="row" style="width: 100%;padding-top: 20px;">
                             <div class="col d-xl-flex flex-column justify-content-xl-center align-items-xl-start">
-                                <h6 class="text-muted mb-2" style="font-size: 15px;color: rgba(0,0,0,0.25);">User name</h6><input type="text" class="form-control" placeholder="User Name" name="username">
+                                <h6 class="text-muted mb-2" style="font-size: 15px;color: rgba(0,0,0,0.25);">User name</h6><input type="text" value="<?php echo $userData['user_name'] ?>" class="form-control" placeholder="User Name" name="username">
                             </div>
                             <div class="col d-xl-flex flex-column justify-content-xl-center align-items-xl-start">
-                                <h6 class="text-muted mb-2" style="font-size: 15px;color: rgba(0,0,0,0.25);">User Email</h6><input type="text" class="form-control" placeholder="User Name" name="username">
-                            </div>
-                        </div>
-                        <div class="row" style="width: 100%;padding-top: 20px;">
-                            <div class="col d-xl-flex flex-column justify-content-xl-center align-items-xl-start">
-                                <h6 class="text-muted mb-2" style="font-size: 15px;color: rgba(0,0,0,0.25);">First Name</h6><input type="text" class="form-control" placeholder="User Name" name="username">
-                            </div>
-                            <div class="col d-xl-flex flex-column justify-content-xl-center align-items-xl-start">
-                                <h6 class="text-muted mb-2" style="font-size: 15px;color: rgba(0,0,0,0.25);">Last Name</h6><input type="text" class="form-control" placeholder="User Name" name="username">
+                                <h6 class="text-muted mb-2" style="font-size: 15px;color: rgba(0,0,0,0.25);">User Email</h6><input type="text" value="<?php echo $userData['email'] ?>" class="form-control" placeholder="User Name" name="username">
                             </div>
                         </div>
                         <div class="row" style="width: 100%;padding-top: 20px;">
                             <div class="col d-xl-flex flex-column justify-content-xl-center align-items-xl-start">
-                                <h6 class="text-muted mb-2" style="font-size: 15px;color: rgba(0,0,0,0.25);">Address</h6><input type="text" class="form-control" placeholder="User Name" name="username">
+                                <h6 class="text-muted mb-2" style="font-size: 15px;color: rgba(0,0,0,0.25);">First Name</h6><input type="text" value="<?php echo $userData['fname'] ?>" class="form-control" placeholder="User Name" name="username">
                             </div>
                             <div class="col d-xl-flex flex-column justify-content-xl-center align-items-xl-start">
-                                <h6 class="text-muted mb-2" style="font-size: 15px;color: rgba(0,0,0,0.25);">Phone No</h6><input type="text" class="form-control" placeholder="User Name" name="username">
+                                <h6 class="text-muted mb-2" style="font-size: 15px;color: rgba(0,0,0,0.25);">Last Name</h6><input type="text" value="<?php echo $userData['lname'] ?>" class="form-control" placeholder="User Name" name="username">
                             </div>
                         </div>
                         <div class="row" style="width: 100%;padding-top: 20px;">
                             <div class="col d-xl-flex flex-column justify-content-xl-center align-items-xl-start">
-                                <h6 class="text-muted mb-2" style="font-size: 15px;color: rgba(0,0,0,0.25);">Id No</h6><input type="text" class="form-control" placeholder="User Name" name="username">
+                                <h6 class="text-muted mb-2" style="font-size: 15px;color: rgba(0,0,0,0.25);">Address</h6><input type="text" value="<?php echo $userData['address'] ?>" class="form-control" placeholder="User Name" name="username">
+                            </div>
+                            <div class="col d-xl-flex flex-column justify-content-xl-center align-items-xl-start">
+                                <h6 class="text-muted mb-2" style="font-size: 15px;color: rgba(0,0,0,0.25);">Phone No</h6><input type="text" value="<?php echo $userData['phoneNo'] ?>" class="form-control" placeholder="User Name" name="username">
+                            </div>
+                        </div>
+                        <div class="row" style="width: 100%;padding-top: 20px;">
+                            <div class="col d-xl-flex flex-column justify-content-xl-center align-items-xl-start">
+                                <h6 class="text-muted mb-2" style="font-size: 15px;color: rgba(0,0,0,0.25);">Id No</h6><input type="text" value="<?php echo $userData['idno'] ?>" class="form-control" placeholder="User Name" name="username">
                             </div>
                             <div class="col d-xl-flex flex-column justify-content-xl-center align-items-xl-start"></div>
                         </div>

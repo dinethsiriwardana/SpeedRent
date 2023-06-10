@@ -15,6 +15,7 @@ function checkpwds() {
     return true;
   }
 }
+
 function checkL() {
     var cnfrmpwd = document.getElementById("cnfrmpwd");
     if (cnfrmpwd.value.length >= 8) {
