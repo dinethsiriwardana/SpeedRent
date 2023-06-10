@@ -21,9 +21,6 @@ $name = "name";
 $sql = "insert into msg_table (msg_type, reply_msg_id, msg, seen, from_id, to_id, title)
 VALUES ('info', 0, '$msg',0,$uid,0,'$title')";
 if ($conn->query($sql) === TRUE) {
-    //Rederect back
-
-
     header("location: ../../user.php");
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
