@@ -23,10 +23,7 @@
             header("Location: ../login.php");
         } else {
             echo "Error updating password: " . $conn->error;
+          header("Location: ../password_reset_email.html");
         }
-    }else{     
-               header("Location: ../password_reset_email.html");
-
-    }
     
 ?>
