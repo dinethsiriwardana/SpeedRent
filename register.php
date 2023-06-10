@@ -62,9 +62,8 @@
                                             </div>
                                         </div>
                                         <div class="col-12 col-sm-6" style="margin-bottom: 15px;">
-                                            <input class="form-control multisteps-form__input" type="text" placeholder="User Name" name="username" onchange="checkUsername(this.value)">
-                                           
-                                        </div>
+                                            <input class="form-control multisteps-form__input" type="text" placeholder="User Name" name="username" id = "uname" onchange="checkUsername(this.value)">
+                                        </div> 
                                         <div class="col-12 col-sm-6 mt-4 mt-sm-0" style="margin-bottom: 15px;"><input
                                                 class="form-control multisteps-form__input" type="password" id="txtpass"
                                                 placeholder="Password" name="password"><!-- Start: Valid Lable -->
