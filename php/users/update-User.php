@@ -13,18 +13,18 @@
     $idNo      =  $_POST['idNo'];
 
     $table = "user_accounts";
-    $where = "email = $useremail AND uid = $uid";
+    $where = "email = '$useremail' AND uid = $uid";
     $set = "fname = '$firstname', lname = '$lastname', address = '$address', phoneNo = '$phoneNo', idno = '$idNo'";
 
     $sql = "Update $table set $set where $where";
-
+    echo $sql;
     if ($conn->query($sql) === TRUE) {
         $msg = "Speed Rent \nYour details has been successfully updated.";
             //sendSMS($phnno,$msg);
-            //header("Location: ../login.php");
+            header("Location: ../../user-details.php");
     } 
     else {
         echo "Error updating details: " . $conn->error;
-        //header("Location: ../password_reset_email.html");
+        header("Location: ../../user-details.php?error=1");
     }
 ?>

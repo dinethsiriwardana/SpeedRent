@@ -55,6 +55,7 @@
     </nav><!-- End: Navbar Centered Brand -->
     <div class="container" style="padding: 15px;padding-top: 15px;width: 95%;max-width: 100%;padding-right: 25px;padding-left: 25px;border-radius: 10px;border-style: solid;border-color: rgba(33,37,41,0.21);margin-bottom: 47px;margin-top: 15px;">
         <h1 style="text-align: center;color: var(--bs-red);">User Panel...</h1>
+    
         <div class="row d-xxl-flex align-items-xxl-center" style="padding-bottom: 15px;padding-top: 10px;">
         <form action="php/users/update-User.php" method="post">
             <div class="col">
@@ -66,7 +67,17 @@
                             </div>
                         </div>
                         <div class="row" style="width: 100%;padding-top: 20px;">
+                        <br>
+
+                            <?php
+                                if(isset($_GET['error'])){
+                                    echo '<h5 style="text-align: left;color: var(--bs-red);" >Error updating details.....</h5>';
+                                }
+                            ?>
+                            <br>
+                            <br>
                             <div class="col d-xl-flex flex-column justify-content-xl-center align-items-xl-start">
+                             
                                 <h6 class="text-muted mb-2" style="font-size: 15px;color: rgba(0,0,0,0.25);">User name</h6><input type="text" value="<?php echo $userData['user_name'] ?>" class="form-control" placeholder="User Name" name="username">
                             </div>
                             <div class="col d-xl-flex flex-column justify-content-xl-center align-items-xl-start">
