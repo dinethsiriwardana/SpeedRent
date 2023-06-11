@@ -34,9 +34,7 @@ include "php/dbcon.php";
     $select = "*";
     $table = "car_table";
 
-
     $sql = "SELECT $select FROM $table WHERE carid = $carid";
-
 
     $filename = __FILE__; // Get the current PHP filename
     logMessage($filename, $sql);
