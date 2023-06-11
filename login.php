@@ -54,9 +54,7 @@
                                     </div>
                                 </div>
                                 <div class="text-start mb-3"><input class="form-control" type="password" id="txtpass" name="password" placeholder="Password" onkeypress="validation();">
-                                    <div class="valid-feedback">
-                                        Looks good!
-                                    </div><!-- Start: Valid Lable -->
+                                  <!-- Start: Valid Lable -->
                                     <div id='txtpasslbl' class="invalid-feedback">
                                         Must be at least 8 characters
                                     </div><!-- End: Valid Lable -->
