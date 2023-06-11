@@ -1,8 +1,8 @@
 <?php
 
-$path = "./php/";
-include $path . "dbcon.php";
-include $path . "encryption.php";
+// $path = "./php/";
+// include $path . "dbcon.php";
+// include $path . "encryption.php";
 
 $select = "*";
 $table = "rent_order";
@@ -27,7 +27,7 @@ if ($result->num_rows > 0) {
                     <div class="col d-xl-flex flex-column justify-content-xl-center align-items-xl-start">
                         <h6 class="text-muted mb-2" style="font-size: 20px;color: rgba(0,0,0,0.25);">Order #' . $row['orderid'] . '</h6>
                     </div>
-                </div><img class="d-flex justify-content-center" src="assets/img/' . $row['carid'] . '.jpg" style="width: 100%;min-width: auto;" width="auto" height="auto">
+                </div><img class="d-flex justify-content-center" src="assets/cars/' . $row['carid'] . '.jpg" style="width: 100%;min-width: auto;" width="auto" height="auto">
             </div>
             <div class="col-lg-7 col-xl-8 col-xxl-8 d-lg-flex d-xl-flex flex-column align-items-lg-center justify-content-xl-center align-items-xl-start align-items-xxl-center">
                 <div class="row" style="width: 100%;">

@@ -1,15 +1,10 @@
 <?php
 
-$path = "../";
-include $path . "dbcon.php";
-include $path . "encryption.php";
+
 
 $select = "*";
 $table = "rent_order";
 
-
-$dclientids = explode(",", decryption($_COOKIE['UID']));
-$uid = $dclientids[0];
 
 
 $msg = $_POST['msg'];
