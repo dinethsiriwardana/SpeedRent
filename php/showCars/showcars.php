@@ -40,8 +40,8 @@ if (mysqli_num_rows($result) > 0) {
           <div class="col-xl-12 col-xxl-4"><small class="d-xl-flex justify-content-xl-end" style="font-size: 23px;color: rgba(33,37,41,0.64);">4.5/5.0</small><small class="d-xl-flex justify-content-xl-end align-items-xl-center" style="font-size: 15px;margin-top: -12px;color: rgba(33,37,41,0.52);"></small></div>
       </div>
       <div class="row">
-          <div class="col-xxl-5" style="width: 50%;"><img src="assets/img/' . $row['carid'] . '.jpg" width="80%" style="width: 100%;"></div>
-          <div class="col-xxl-5" style="width: 50%;"><small class="d-xl-flex justify-content-xl-end" style="font-size: 40px;">$' . $row['price'] .
+          <div class="col-xxl-5" style="width: 50%;"><img src="assets/cars/' . $row['carid'] . '.jpg" width="80%" style="width: 100%;"></div>
+          <div class="col-xxl-5" style="width: 50%;"><small class="d-xl-flex justify-content-xl-end" style="font-size: 30px;">$' . $row['price'] .
             '</small><small class="d-xl-flex justify-content-xl-end align-items-xl-center" style="font-size: 15px;margin-top: -12px;color: rgba(33,37,41,0.52);">per day</small>
               <p style="margin-bottom: 0px;text-align: right;">Fuel Type - Petrol<br>No. of Seats - 5</p>
               <div class="row">

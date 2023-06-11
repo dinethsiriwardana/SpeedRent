@@ -10,33 +10,38 @@ $uid = $dclientids[0];
 
 $tbl_msg = 'msg_table';
 
-$sql = "SELECT * FROM $tbl_msg WHERE to_id = $uid limit 3";
-
+$sql = "SELECT * FROM $tbl_msg WHERE to_id = $uid ORDER BY datetime_column desc limit 3 ";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         echo '
         
-      <div class="row" style="margin-bottom: 15px;">
-    <div class="col-md-4 col-xl-3 col-xxl-3 d-xxl-flex align-items-xxl-center">
-        <div>
-            <h6 class="text-muted mb-2" style="font-size: 15px;color: rgba(0,0,0,0.25);">User ID</h6>
-            <h4 style="font-size: 25px;">' . $row['datetime_column'] . '</h4>
+    <div class="row" style="margin-bottom: 15px;">
+        <div class=" col-md-4 col-xl-3 col-xxl-4 d-xxl-flex align-items-xxl-center">
+            <div>
+                <h6 class="text-muted mb-2" style="font-size: 15px;color: rgba(0,0,0,0.25);">User ID</h6>
+                <h4 style="font-size: 25px;">' . $row['datetime_column'] . '</h4>
+            </div>
+        </div>
+        <div class="col-5 col-md-8 col-xxl-7 d-xxl-flex align-items-xxl-center">
+            <div>
+                <h6 class="text-muted mb-2" style="font-size: 15px;color: rgba(0,0,0,0.25);">About</h6>
+                <h4 class="text-truncate" style="font-size: 25px;width: 398.062px;">' . $row['title'] . '</h4>
+            </div>
+        </div>
+    
+        <div class="col-md-4 col-lg-12 col-xl-1 col-xxl-1 d-xl-flex d-xxl-flex align-items-xl-center align-items-xxl-center" 
+                style="padding-left: 1px;margin-bottom: -12px;">
+            <div class="d-flex justify-content-center">
+                <a href="user-msg.php?msgid=' . $row['msgid'] . '">
+                <svg class="bi bi-arrow-right-circle-fill" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" style="font-size: 38px;color: var(--bs-red);">
+                    <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"></path>
+                </svg>
+                </a>
+            </div>
         </div>
     </div>
-    <div class="col-5 col-md-8 col-xxl-8 d-xxl-flex align-items-xxl-center">
-        <div>
-            <h6 class="text-muted mb-2" style="font-size: 15px;color: rgba(0,0,0,0.25);">About</h6>
-            <h4 class="text-truncate" style="font-size: 25px;width: 398.062px;">' . $row['title'] . '</h4>
-        </div>
-    </div>
-    <div class="col-md-4 col-lg-12 col-xl-1 col-xxl-1 d-xl-flex d-xxl-flex align-items-xl-center align-items-xxl-center" style="padding-left: 1px;margin-bottom: -12px;">
-        <div class="d-flex justify-content-center"><svg class="bi bi-arrow-right-circle-fill" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" style="font-size: 38px;color: var(--bs-red);">
-                <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"></path>
-            </svg></div>
-    </div>
-</div>
         ';
     }
 } else {

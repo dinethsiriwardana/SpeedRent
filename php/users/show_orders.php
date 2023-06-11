@@ -74,7 +74,11 @@ if ($result->num_rows > 0) {
                     </div>
                 </div>
                 <div class="text-end d-lg-flex d-xxl-flex justify-content-lg-end justify-content-xxl-end" style="width: 100%;margin-top: 15px;margin-right: 20px;">
-                    <button class="btn btn-success" type="button" style="background: var(--bs-red);border-style: none;">Cancel</button>
+                <div class="col-2">
+                <a class="btn btn-primary" role="button" href="php/users/deleteorder.php?orderid=' . $row['orderid'] . '" style="background: var(--bs-red);border-style: none;margin-top: 15px;width: 49%;">Cancel</a>
+
+                </div>   
+        
                 </div>
             </div>
         </div>

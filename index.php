@@ -18,83 +18,16 @@
     include "landing_page.php";
 
     include "php/interface/navbar.php";
+    include "php/dbcon.php"
     ?>
     <div class="container">
         <h1 class="text-center" style="margin-top: 23px;">Our Latest ....</h1>
     </div><!-- Start: Pretty Product List -->
     <div class="row product-list" style="margin-left: 40px;margin-right: 40px;">
-        <div class="col-sm-6 col-md-4 product-item">
-            <div class="product-container">
-                <div class="row">
-                    <div class="col-md-12"><a class="product-image" href="#"><img src="assets/img/2500611.webp"></a></div>
-                </div>
-                <div class="row">
-                    <div class="col-8">
-                        <h2><a href="#">Car 1</a></h2>
-                    </div>
-                </div>
-                <div class="product-rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half"></i><a class="small-text" href="#">82 reviews</a></div>
-                <div class="row">
-                    <div class="col-12">
-                        <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare sem sed nisl dignissim, facilisis dapibus lacus vulputate. Sed lacinia lacinia magna. </p>
-                        <div class="row">
-                            <div class="col-6"><a class="btn btn-light" role="button" href="cars.html" style="background: var(--bs-red);border-style: none;color: var(--bs-btn-bg);">Rent Now !</a></div>
-                            <div class="col-6">
-                                <p class="product-price">$599.00 </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6 col-md-4 product-item">
-            <div class="product-container">
-                <div class="row">
-                    <div class="col-md-12"><a class="product-image" href="#" style="border-style: none;"><img src="assets/img/Toyota_Camry_Red_White_background_540853_2560x1440.jpg"></a></div>
-                </div>
-                <div class="row">
-                    <div class="col-8">
-                        <h2><a href="#">Car 2</a></h2>
-                    </div>
-                </div>
-                <div class="product-rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half"></i><a class="small-text" href="#">82 reviews</a></div>
-                <div class="row">
-                    <div class="col-12">
-                        <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare sem sed nisl dignissim, facilisis dapibus lacus vulputate. Sed lacinia lacinia magna. </p>
-                        <div class="row">
-                            <div class="col-6"><a class="btn btn-light" role="button" href="cars.html" style="background: var(--bs-red);color: var(--bs-btn-bg);">Rent Now !</a></div>
-                            <div class="col-6">
-                                <p class="product-price">$599.00 </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6 col-md-4 product-item">
-            <div class="product-container">
-                <div class="row">
-                    <div class="col-md-12"><a class="product-image" href="#"><img src="assets/img/BMW%20m5%202020.webp"></a></div>
-                </div>
-                <div class="row">
-                    <div class="col-8">
-                        <h2><a href="#">Car 3</a></h2>
-                    </div>
-                </div>
-                <div class="product-rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half"></i><a class="small-text" href="#">82 reviews</a></div>
-                <div class="row">
-                    <div class="col-12">
-                        <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare sem sed nisl dignissim, facilisis dapibus lacus vulputate. Sed lacinia lacinia magna. </p>
-                        <div class="row">
-                            <div class="col-6"><a class="btn btn-light fs-6" role="button" href="cars.html" style="background: var(--bs-danger);color: var(--bs-btn-bg);">Rent Now !</a></div>
-                            <div class="col-6">
-                                <p class="product-price">$599.00 </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+        <?php
+        include "php/showCars/showbestcars.php";
+        ?>
     </div><!-- End: Pretty Product List -->
     <!-- Start: Banner Heading Image -->
     <section class="py-4 py-xl-5">

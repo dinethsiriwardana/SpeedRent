@@ -54,7 +54,7 @@ include  "php/encryption.php";
                 </div>
             </div>
             <form action="php/users/sendmsg.php" method="post">
-                <input class="form-control" type="text" id="" name="title" placeholder="Title" autofocus="" autocomplete="on">
+                <input class="form-control" type="text" id="" name="title" placeholder="Title" autocomplete="on">
 
                 <textarea name="msg" style="margin-top: 15px;width: 100%;height: 136px;border-radius: 5px;border-style: solid;border-color: rgba(0,0,0,0.22);"></textarea>
                 <div class="container d-flex d-xxl-flex justify-content-end justify-content-xxl-end" style="padding-bottom: 3px;padding-top: 15px;border-bottom-style: none;border-bottom-color: rgba(33,37,41,0.21);padding-right: 0px;">
