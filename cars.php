@@ -1,5 +1,6 @@
 <?php
 include "php/log.php";
+include "php/dbcon.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,30 +31,15 @@ include "php/log.php";
                         <hr>
                         <div class="col">
                             <small style="font-size: 25px;">Brand</small>
-                            <div class="form-check" style="margin-bottom: 5px;margin-top: 20px;">
-                                <input class="form-check-input" type="checkbox" id="formCheck-1" name="brand[]" value="Audi">
-                                <label class="form-check-label" for="formCheck-1">Audi</label>
-                            </div>
-                            <div class="form-check" style="margin-bottom: 5px;">
-                                <input class="form-check-input" type="checkbox" id="formCheck-4" name="brand[]" value="Toyota">
-                                <label class="form-check-label" for="formCheck-4">Toyota</label>
-                            </div>
-                            <div class="form-check" style="margin-bottom: 5px;">
-                                <input class="form-check-input" type="checkbox" id="formCheck-3" name="brand[]" value="BMW">
-                                <label class="form-check-label" for="formCheck-3">BMW</label>
-                            </div>
-                            <div class="form-check" style="margin-bottom: 5px;">
-                                <input class="form-check-input" type="checkbox" id="formCheck-2" name="brand[]" value="Mercedes-Benz">
-                                <label class="form-check-label" for="formCheck-2">Mercedes-Benz</label>
-                            </div>
+                            <?php include "php/showCars/showcarcatfilter.php" ?>
                         </div>
                         <hr>
                         <div class="col">
                             <small style="font-size: 25px;">Price</small>
                         </div>
                         <div class="col">
-                            <input class="form-control-sm" type="number" name="maxprice" min="0" step="10" placeholder="Max " style="width: 100%;height: 37px;border-color: rgba(0,0,0,0.13);border-radius: 5px;margin-top: 10px;margin-left: 0px;">
                             <input class="form-control-sm" type="number" name="minprice" min="0" step="10" placeholder="Min " style="width: 100%;height: 37px;border-color: rgba(0,0,0,0.13);border-radius: 5px;margin-top: 20px;margin-right: 18px;">
+                            <input class="form-control-sm" type="number" name="maxprice" min="0" step="10" placeholder="Max " style="width: 100%;height: 37px;border-color: rgba(0,0,0,0.13);border-radius: 5px;margin-top: 10px;margin-left: 0px;">
                             <button class="btn btn-primary" style="background: var(--bs-red);border-style: none;margin-top: 15px;width: 100%;">Search</button>
                         </div>
                     </div>

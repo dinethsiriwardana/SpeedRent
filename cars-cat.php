@@ -22,6 +22,7 @@
     <div class="container" style="width: 95%;max-width: 95%;">
         <div class="row row-cols-sm-1 row-cols-md-1 row-cols-lg-2 row-cols-xl-2 row-cols-xxl-2" style="margin-top: 70px;margin-right: -18px;">
             <!-- Start: <Filter> Item Col -->
+
             <div class="col-lg-9 col-xl-9 col-xxl-10" style="margin-top: -5px;width: 100%;">
                 <div class="container" style="margin-top: 0px;">
                     <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-2 row-cols-xl-2 row-cols-xxl-2 justify-content-between" style="display: flex;margin-right: -12px;margin-top: 8px;margin-bottom: 20px;">
