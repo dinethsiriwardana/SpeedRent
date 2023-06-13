@@ -76,28 +76,28 @@
                                     <h6 class="text-muted mb-2" style="font-size: 15px;color: rgba(0,0,0,0.25);">User name</h6><input type="text" value="<?php echo $userData['user_name'] ?>" class="form-control" placeholder="User Name" name="username" disabled>
                                 </div>
                                 <div class="col d-xl-flex flex-column justify-content-xl-center align-items-xl-start">
-                                    <h6 class="text-muted mb-2" style="font-size: 15px;color: rgba(0,0,0,0.25);">User Email</h6><input type="text" value="<?php echo $userData['email'] ?>" class="form-control" placeholder="User Name" name="email">
+                                    <h6 class="text-muted mb-2" style="font-size: 15px;color: rgba(0,0,0,0.25);">User Email</h6><input type="text" value="<?php echo $userData['email'] ?>" class="form-control" placeholder="Email" name="email" required>
                                 </div>
                             </div>
                             <div class="row" style="width: 100%;padding-top: 20px;">
                                 <div class="col d-xl-flex flex-column justify-content-xl-center align-items-xl-start">
-                                    <h6 class="text-muted mb-2" style="font-size: 15px;color: rgba(0,0,0,0.25);">First Name</h6><input type="text" value="<?php echo $userData['fname'] ?>" class="form-control" placeholder="User Name" name="firstname">
+                                    <h6 class="text-muted mb-2" style="font-size: 15px;color: rgba(0,0,0,0.25);">First Name</h6><input type="text" value="<?php echo $userData['fname'] ?>" class="form-control" placeholder="First Name" name="firstname" required>
                                 </div>
                                 <div class="col d-xl-flex flex-column justify-content-xl-center align-items-xl-start">
-                                    <h6 class="text-muted mb-2" style="font-size: 15px;color: rgba(0,0,0,0.25);">Last Name</h6><input type="text" value="<?php echo $userData['lname'] ?>" class="form-control" placeholder="User Name" name="lastname">
-                                </div>
-                            </div>
-                            <div class="row" style="width: 100%;padding-top: 20px;">
-                                <div class="col d-xl-flex flex-column justify-content-xl-center align-items-xl-start">
-                                    <h6 class="text-muted mb-2" style="font-size: 15px;color: rgba(0,0,0,0.25);">Address</h6><input type="text" value="<?php echo $userData['address'] ?>" class="form-control" placeholder="User Name" name="address">
-                                </div>
-                                <div class="col d-xl-flex flex-column justify-content-xl-center align-items-xl-start">
-                                    <h6 class="text-muted mb-2" style="font-size: 15px;color: rgba(0,0,0,0.25);">Phone No</h6><input type="text" value="<?php echo $userData['phoneNo'] ?>" class="form-control" placeholder="User Name" name="phoneNo">
+                                    <h6 class="text-muted mb-2" style="font-size: 15px;color: rgba(0,0,0,0.25);">Last Name</h6><input type="text" value="<?php echo $userData['lname'] ?>" class="form-control" placeholder="Last Name" name="lastname" required>
                                 </div>
                             </div>
                             <div class="row" style="width: 100%;padding-top: 20px;">
                                 <div class="col d-xl-flex flex-column justify-content-xl-center align-items-xl-start">
-                                    <h6 class="text-muted mb-2" style="font-size: 15px;color: rgba(0,0,0,0.25);">Id No</h6><input type="text" value="<?php echo $userData['idno'] ?>" class="form-control" placeholder="User Name" name="idNo">
+                                    <h6 class="text-muted mb-2" style="font-size: 15px;color: rgba(0,0,0,0.25);">Address</h6><input type="text" value="<?php echo $userData['address'] ?>" class="form-control" placeholder="Address" name="address" required>
+                                </div>
+                                <div class="col d-xl-flex flex-column justify-content-xl-center align-items-xl-start">
+                                    <h6 class="text-muted mb-2" style="font-size: 15px;color: rgba(0,0,0,0.25);">Phone No</h6><input type="text" value="<?php echo $userData['phoneNo'] ?>" class="form-control" placeholder="Phone No" name="phoneNo" required>
+                                </div>
+                            </div>
+                            <div class="row" style="width: 100%;padding-top: 20px;">
+                                <div class="col d-xl-flex flex-column justify-content-xl-center align-items-xl-start">
+                                    <h6 class="text-muted mb-2" style="font-size: 15px;color: rgba(0,0,0,0.25);">Id No</h6><input type="text" value="<?php echo $userData['idno'] ?>" class="form-control" placeholder="Id Number" name="idNo" required>
                                 </div>
                                 <div class="col d-xl-flex flex-column justify-content-xl-center align-items-xl-start"></div>
                             </div>
