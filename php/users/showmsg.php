@@ -20,7 +20,7 @@ if ($result->num_rows > 0) {
     <div class="row" style="margin-bottom: 15px;">
         <div class=" col-md-4 col-xl-3 col-xxl-4 d-xxl-flex align-items-xxl-center">
             <div>
-                <h6 class="text-muted mb-2" style="font-size: 15px;color: rgba(0,0,0,0.25);">User ID</h6>
+                <h6 class="text-muted mb-2" style="font-size: 15px;color: rgba(0,0,0,0.25);">Time</h6>
                 <h4 style="font-size: 25px;">' . $row['datetime_column'] . '</h4>
             </div>
         </div>

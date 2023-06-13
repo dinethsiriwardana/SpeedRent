@@ -22,6 +22,7 @@ include "php/dbcon.php";
     <!-- Start: Navbar Centered Brand -->
     <?php
     include "php/interface/navbar_user.php";
+    include "landing_page.php";
 
     include "php/dbcon.php";
     include "php/log.php";

@@ -15,7 +15,7 @@
 
 <body style="border-style: none;border-color: white;">
     <?php
-    include "landing_page.php";
+    // include "landing_page.php";
 
     include "php/interface/navbar.php";
     include "php/dbcon.php"
@@ -27,6 +27,7 @@
 
         <?php
         include "php/showCars/showbestcars.php";
+        // include "php/admin/"
         ?>
     </div><!-- End: Pretty Product List -->
     <!-- Start: Banner Heading Image -->
@@ -39,14 +40,16 @@
                         <div class="text-white p-4 p-md-5" style="background: var(--bs-red);">
                             <h2 class="fw-bold text-white mb-3">We Have&nbsp;loyalty Offers For Our Valuable Customers</h2>
                             <p class="mb-4"></p>
-                            <h1 style="font-size: 33px;">3% off for 50,000.00</h1>
-                            <h1 style="font-size: 33px;">5% off for 100,000.00</h1>
-                            <h1 style="font-size: 33px;">10% off for 500,000.00</h1><!-- Start: Font Awesome List with Icons -->
+                            <h1 style="font-size: 33px;">50% Off Starting </h1>
+                            <h1 style="font-size: 33px;">Second Day Of</h1>
+                            <h1 style="font-size: 33px;">Your Rent</h1><!-- Start: Font Awesome List with Icons -->
                             <ul class="list-unstyled fa-ul"></ul><!-- End: Font Awesome List with Icons -->
-                            <div class="my-3"><a class="btn btn-primary btn-lg me-2" role="button" href="#" style="background: var(--bs-white);color: var(--bs-red);border-style: none;">See More</a></div>
+                            <div class="my-3">
+                                <a class="btn btn-primary btn-lg me-2" role="button" href="cars.php" style="background: var(--bs-white);color: var(--bs-red);border-style: none;">Rent Now</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-6 order-first order-md-last" style="min-height: 250px;height: 410.539px;"><img class="w-100 h-100 fit-cover" src="assets/img/Handing-over-keys-800x534.jpg"></div>
+                    <div class="col-md-6 order-first order-md-last" style="min-height: 250px;height: 410.539px;"><img class="w-100 h-100 fit-cover" src="assets/img/0000.jpg"></div>
                 </div>
             </div>
         </div><!-- End: 1 Row 2 Columns -->

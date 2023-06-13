@@ -1,6 +1,8 @@
 <?php
 
 
+$dclientids = explode(",", decryption($_COOKIE['UID']));
+$uid = $dclientids[0];
 
 $select = "*";
 $table = "rent_order";

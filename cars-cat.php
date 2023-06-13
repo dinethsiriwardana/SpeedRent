@@ -13,7 +13,7 @@
 
 <body style="margin-bottom: 36px;">
     <?php
-    include "landing_page.php";
+    // include "landing_page.php";
 
     include "php/interface/navbar.php";
     include "php/dbcon.php"

@@ -2,6 +2,9 @@
 
 include   "php/dbcon.php";
 include  "php/encryption.php";
+include "landing_page.php";
+
+include "php/users/decuser.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
