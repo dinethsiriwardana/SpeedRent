@@ -18,8 +18,8 @@
         </button>
         <div class="collapse navbar-collapse flex-grow-0 order-md-first" id="navcol-4">
             <ul class="navbar-nav me-auto">
-                <li class="nav-item"><a class="nav-link active" href="#">All Cars</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Category</a></li>
+                <li class="nav-item"><a class="nav-link active" href="cars.php">All Cars</a></li>
+                <li class="nav-item"><a class="nav-link" href="cars-cat.php">Category</a></li>
             </ul>
             <div class="d-md-none my-2"><button class="btn btn-light me-2" type="button">Button</button><button class="btn btn-primary" type="button">Button</button></div>
         </div>

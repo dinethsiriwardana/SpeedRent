@@ -34,9 +34,7 @@ include "php/dbcon.php";
     $select = "*";
     $table = "car_table";
 
-
     $sql = "SELECT $select FROM $table WHERE carid = $carid";
-
 
     $filename = __FILE__; // Get the current PHP filename
     logMessage($filename, $sql);
@@ -66,7 +64,7 @@ include "php/dbcon.php";
             <div class="col">
                 <div class="row row-cols-xl-2 row-cols-xxl-2">
                     <div class="col-lg-5 col-xl-5 col-xxl-6 d-lg-flex d-xl-flex flex-column justify-content-lg-center align-items-lg-center justify-content-xl-center align-items-xl-start justify-content-xxl-start align-items-xxl-start" style="border-right-style: solid;border-right-color: rgba(33,37,41,0.3);">
-                        <h1 style="text-align: center;color: var(--bs-red);padding-left: 30px;"><?php echo $carData['car_band'] . " " . $carData['car_model'] ?>&nbsp;</h1>
+                        <h1 style="text-align: center;color: var(--bs-red);padding-left: 30px;"><?php echo $carData['car_brand'] . " " . $carData['car_model'] ?>&nbsp;</h1>
                         <img class="d-flex justify-content-center" src="assets/cars/<?php echo $_GET["carid"] ?>.jpg" style="width: 100%;min-width: auto;" width="auto" height="auto">
                     </div>
                     <div class="col-lg-7 col-xl-7 col-xxl-6 d-lg-flex d-xl-flex flex-column align-items-lg-center justify-content-xl-center align-items-xl-start align-items-xxl-center">
@@ -74,7 +72,7 @@ include "php/dbcon.php";
                             <div class="col d-xl-flex flex-column justify-content-xl-center align-items-xl-start">
                                 <h6 class="text-muted mb-2" style="font-size: 15px;color: rgba(0,0,0,0.25);">Car Band
                                 </h6>
-                                <h4 style="font-size: 25px;"><?php echo $carData['car_band'] ?></h4>
+                                <h4 style="font-size: 25px;"><?php echo $carData['car_brand'] ?></h4>
                             </div>
                         </div>
                         <div class="row" style="width: 100%;">
