@@ -1,10 +1,21 @@
 <?php
     include 'dbcon.php';
 
-    $availabality = 0;
     $carId = 30000;
 
-    $sql = "UPDATE car_table SET availability = $availabality WHERE carid = $carId";
+    $availability = $_GET['avl'];
+
+    if($availability == "avaiable"){
+        $sql = "UPDATE car_table SET availability = 3 WHERE carid = $carId";
+    }
+    else if($availability == "navaiable"){
+        $sql = "UPDATE car_table SET availability = 0 WHERE carid = $carId";
+    }
+    else{
+        $sql = "UPDATE car_table SET availability = 2 WHERE carid = $carId";
+    }
+
+    
 
     if ($conn->query($sql) === TRUE) {
         echo "record updated successfully";

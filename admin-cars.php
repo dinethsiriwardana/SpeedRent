@@ -210,11 +210,18 @@
                             <div class="col-xxl-7 d-flex d-xl-flex flex-column align-items-center justify-content-xl-end align-items-xl-start align-items-xxl-center" style="padding-bottom: 0px;padding-right: 53px;">
                                 <div class="row d-xl-flex d-xxl-flex justify-content-xl-end align-items-xxl-center" style="width: 100%;">
                                     <div class="col-lg-12 col-xl-8 col-xxl-8">
-                                        <div class="input-group"><select id="inputGroupSelect04" class="form-select">
-                                                <option value="avaiable" selected="">Avaiable</option>
+                                        <div class="input-group">
+                                        <form action="php/changeCarStatus.php" method="$_GET">
+                                            <select id="inputGroupSelect04" class="form-select" name = 'avl'>
+                                                <option value="avaiable">Avaiable</option>
                                                 <option value="navaiable">Not avaiable</option>
                                                 <option value="ntc">Need To Contact</option>
-                                            </select><button class="btn btn-primary" type="button" style="background: var(--bs-red);">Save Data</button></div>
+                                            </select>
+                                            
+                                                <button class="btn btn-primary" type="submit" style="background: var(--bs-red);">Save Data</button></div>
+                                            
+                                               
+                                            </form>
                                     </div>
                                 </div>
                             </div><button class="btn btn-success" type="button" style="background: var(--bs-red);border-style: none;">Edit Details</button>
