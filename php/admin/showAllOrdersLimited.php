@@ -57,8 +57,12 @@ if ($result->num_rows > 0) {
                             </div>
                             <div class="col d-flex d-xl-flex flex-column align-items-center justify-content-xl-end align-items-xl-start align-items-xxl-center" style="padding-bottom: -1px;">
                                 <div class="row d-xl-flex d-xxl-flex justify-content-xl-end align-items-xxl-center" style="width: 100%;">
-                                    <div class="col-lg-12 col-xl-8 col-xxl-8">
-                                            <a class="btn btn-primary" role="button" href="php/admin/acceptorder.php?orderid=' . $row['orderid'] . '&uid=' . $row["uid"] . '&date_from=' . $row["date_from"] . '" style="background: var(--bs-red);border-style: none;margin-top: 15px;width: 49%;">Accept</a>
+                                    <div class="col-lg-6 col-xl-6 col-xxl-6">
+                                            <a class="btn btn-primary" role="button" href="php/admin/rejectorder.php?orderid=' . $row['orderid'] . '&uid=' . $row["uid"] . '&date_from=' . $row["date_from"] . '" style="background: var(--bs-red);border-style: none;margin-top: 15px;width: 49%;">Reject</a>
+                                    </div>
+                                    <div class="col-lg-6 col-xl-6 col-xxl-6">
+
+                                            <a class="btn btn-primary" role="button" href="php/admin/acceptorder.php?orderid=' . $row['orderid'] . '&uid=' . $row["uid"] . '&date_from=' . $row["date_from"] . '" style="background: var(--bs-green);border-style: none;margin-top: 15px;width: 49%;">Accept</a>
                                     </div>
                                 </div>
                             </div>

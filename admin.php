@@ -18,6 +18,8 @@
 <body>
     <!-- Start: Navbar Centered Brand -->
     <?php
+    include "php/encryption.php";
+
     include "php/interface/navbar_user.php";
     include "php/admin/show_data.php";
     include "php/dbcon.php";
@@ -95,6 +97,130 @@
                 </div>
             </form>
         </div>
+    </div>
+    <div class="row" style="margin-right: 35px;margin-left: 35px;margin-bottom: 30px;">
+        <!-- Start: Our Cars - LIst -->
+        <div class="col" style="padding: 15px;padding-top: 15px;width: 95%;max-width: 100%;padding-right: 15px;padding-left: 15px;border-style: solid;border-color: rgba(33,37,41,0.21);border-radius: 10px;margin: 5px;">
+            <h1 style="text-align: center;color: var(--bs-red);font-size: 30px;">Employees..</h1><!-- Start: 1 Row 3 Columns -->
+            <div class="container" style="border-bottom-style: solid;border-bottom-color: rgba(33,37,41,0.21);padding-bottom: 3px;padding-top: 5px;">
+                <?php
+                include "php/admin/show_emp.php";
+                ?>
+            </div><!-- End: 1 Row 3 Columns -->
+            <!-- Start: See More Button -->
+        </div><!-- End: Our Cars - LIst -->
+        <div class="col" style="padding: 15px;padding-top: 15px;width: 95%;max-width: 100%;padding-right: 15px;padding-left: 15px;border-style: solid;border-color: rgba(33,37,41,0.21);border-radius: 10px;margin: 5px;">
+            <h1 style="text-align: center;color: var(--bs-red);font-size: 30px;">Employee's Medical</h1><!-- Start: 1 Row 3 Columns -->
+            <div class="container" style="border-bottom-style: solid;border-bottom-color: rgba(33,37,41,0.21);padding-bottom: 3px;padding-top: 5px;">
+                <?php
+
+
+                $sql = "SELECT * FROM medical_table";
+
+                $result = mysqli_query($conn, $sql);
+
+                if ($result->num_rows > 0) {
+
+                    while ($row = $result->fetch_assoc()) {
+
+
+                        echo '  <div class="row" style="margin-bottom: 15px;">
+
+                    <div class="col-2 col-md-2 col-xxl-2 d-xxl-flex align-items-xxl-center">
+                        <div>
+                            <h6 class="text-muted mb-2" style="font-size: 15px;color: rgba(0,0,0,0.25);">User ID</h6>
+                            <h4 style="font-size: 25px;">' . $row['emp_id'] . '</h4>
+                        </div>
+                    </div>
+                    <div class="col-2 col-md-4 col-xxl-5 d-xxl-flex align-items-xxl-center">
+                        <div>
+                            <h6 class="text-muted mb-2" style="font-size: 15px;color: rgba(0,0,0,0.25);">Reason</h6>
+                            <h4 class="text-truncate" style="font-size: 25px;">' . $row['reason'] . '</h4>
+                        </div>
+                    </div>
+                    <div class="col-2 col-md-4 col-xxl-5 d-xxl-flex align-items-xxl-center">
+                        <div>
+                            <h6 class="text-muted mb-2" style="font-size: 15px;color: rgba(0,0,0,0.25);">Date</h6>
+                            <h4 class="text-truncate" style="font-size: 25px;">' . $row['date'] . '</h4>
+                        </div>
+                    </div>
+                 
+                    
+                         </div>';
+                    }
+                }
+
+                ?>
+            </div><!-- End: 1 Row 3 Columns -->
+            <!-- Start: See More Button -->
+        </div><!-- End: Our Cars - LIst -->
+
+    </div>
+    <div class="row" style="margin-right: 35px;margin-left: 35px;margin-bottom: 30px;">
+        <!-- Start: Our Cars - LIst -->
+
+        <div class="col" style="padding: 15px;padding-top: 15px;width: 95%;max-width: 100%;padding-right: 15px;padding-left: 15px;border-style: solid;border-color: rgba(33,37,41,0.21);border-radius: 10px;margin: 5px;">
+            <h1 style="text-align: center;color: var(--bs-red);font-size: 30px;">Employee's Salary</h1><!-- Start: 1 Row 3 Columns -->
+            <div class="container" style="border-bottom-style: solid;border-bottom-color: rgba(33,37,41,0.21);padding-bottom: 3px;padding-top: 5px;">
+                <div class="row d-xxl-flex justify-content-xxl-end">
+                    <div class="col d-xxl-flex justify-content-xxl-end"><a class="btn btn-success" role="button" href="php/downloadsalary.php">Download Salary</a></div>
+                </div>
+                <?php
+
+
+                $pay_per_day = 100;
+
+                // Query to fetch attendance data and calculate the total amount by employee and month
+                $query = "SELECT emp_id, MONTH(date) AS month, SUM(attend) AS total_attendance, SUM(attend) * $pay_per_day AS total_amount
+          FROM emp_atnd
+          GROUP BY emp_id, MONTH(date)";
+
+                $result = $conn->query($query);
+
+                if ($result->num_rows > 0) {
+                    // Loop through the results
+                    while ($row = $result->fetch_assoc()) {
+
+
+                        echo '  <div class="row" style="margin-bottom: 15px;">
+
+                    <div class="col-2 col-md-2 col-xxl-2 d-xxl-flex align-items-xxl-center">
+                        <div>
+                            <h6 class="text-muted mb-2" style="font-size: 15px;color: rgba(0,0,0,0.25);">User ID</h6>
+                            <h4 style="font-size: 25px;">' . $row['emp_id'] . '</h4>
+                        </div>
+                    </div>
+                    <div class="col-2 col-md-3 col-xxl-3 d-xxl-flex align-items-xxl-center">
+                        <div>
+                            <h6 class="text-muted mb-2" style="font-size: 15px;color: rgba(0,0,0,0.25);">Month</h6>
+                            <h4 class="text-truncate" style="font-size: 25px;">' . $row['month'] . '</h4>
+                        </div>
+                    </div>
+                    
+                    <div class="col-2 col-md-3 col-xxl-3 d-xxl-flex align-items-xxl-center">
+                        <div>
+                            <h6 class="text-muted mb-2" style="font-size: 15px;color: rgba(0,0,0,0.25);">No of Attendance</h6>
+                            <h4 class="text-truncate" style="font-size: 25px;">' . $row['total_attendance'] . '</h4>
+                        </div>
+                    </div>
+                    
+                    <div class="col-2 col-md-3 col-xxl-3 d-xxl-flex align-items-xxl-center">
+                        <div>
+                            <h6 class="text-muted mb-2" style="font-size: 15px;color: rgba(0,0,0,0.25);">Total</h6>
+                            <h4 class="text-truncate" style="font-size: 25px;">' . $row['total_amount'] . '</h4>
+                        </div>
+                    </div>
+                    
+                    
+                         </div>';
+                    }
+                }
+
+                ?>
+            </div><!-- End: 1 Row 3 Columns -->
+            <!-- Start: See More Button -->
+        </div><!-- End: Our Cars - LIst -->
+
     </div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>

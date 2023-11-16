@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "root";
-$dbname = "u812963415_speedrent";
+$dbname = "speedrent";
 // $servername = "191.96.56.1";
 // $username = "u812963415_speedrent";
 // $password = "9i@4?MH^J]r";

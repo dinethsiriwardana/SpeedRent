@@ -24,15 +24,79 @@ include "php/users/decuser.php";
     include "php/interface/navbar_user.php";
     ?>
 
-    <div class="container" style="padding: 15px;padding-top: 15px;width: 95%;max-width: 100%;padding-right: 25px;padding-left: 25px;border-radius: 10px;border-style: solid;border-color: rgba(33,37,41,0.21);margin-bottom: 47px;margin-top: 15px;">
-        <h1 style="text-align: center;color: var(--bs-red);">My Orders..</h1>
-        <div class="row d-xxl-flex align-items-xxl-center" style="padding-bottom: 15px;padding-top: 10px;">
-            <div class="col">
 
-                <?php include "./php/users/show_orders.php" ?>
-
-            </div>
+    <div class="row" style="margin-right: 35px;margin-left: 35px;margin-bottom: 30px;">
+        <div class="col-lg-7 col-xl-7 col-xxl-7" style="border-style: solid;border-color: rgba(33,37,41,0.21);border-radius: 10px;margin: 5px;padding: 9px 12px;padding-top: 10px;padding-bottom: 20px;">
+            <h1 style="text-align: center;color: var(--bs-red);font-size: 30px;margin-bottom: 12px;">Info..</h1><!-- Start: User Massege -->
+            <div class="container" style="padding-bottom: 3px;padding-top: 5px;">
+                <center>
+                    <a href="emp_attend.php"> <button class="btn btn-success" type="submit">See Attendence</button> </a>
+                    <br>
+                    <br>
+                    <a href="emp_medical.php"> <button class="btn btn-success" type="submit">Submit a Medical</button></a>
+                    <br>
+                </center>
+            </div><!-- End: User Massege -->
+            <!-- Start: See More Button -->
         </div>
+
+        <div class="col" style="padding: 15px;padding-top: 15px;width: 95%;max-width: 100%;padding-right: 15px;padding-left: 15px;border-style: solid;border-color: rgba(33,37,41,0.21);border-radius: 10px;margin: 5px;">
+            <h1 style="text-align: center;color: var(--bs-red);font-size: 30px;">Employee's Salary</h1><!-- Start: 1 Row 3 Columns -->
+            <div class="container" style="border-bottom-style: solid;border-bottom-color: rgba(33,37,41,0.21);padding-bottom: 3px;padding-top: 5px;">
+
+                <?php
+                $dclientids = explode(",", decryption($_COOKIE['UID']));
+                $uid = $dclientids[0];
+
+                $pay_per_day = 100;
+
+                // Query to fetch attendance data and calculate the total amount by employee and month
+                $query = "SELECT MONTH(date) AS month, SUM(attend) AS total_attendance, SUM(attend) * $pay_per_day AS total_amount
+          FROM emp_atnd
+          WHERE emp_id = $uid
+          GROUP BY MONTH(date)";
+
+                $result = $conn->query($query);
+
+                if ($result->num_rows > 0) {
+                    // Loop through the results
+                    while ($row = $result->fetch_assoc()) {
+
+
+                        echo '  <div class="row" style="margin-bottom: 15px;">
+
+                    
+                    <div class="col-4 col-md-4 col-xxl-4 d-xxl-flex align-items-xxl-center">
+                        <div>
+                            <h6 class="text-muted mb-2" style="font-size: 15px;color: rgba(0,0,0,0.25);">Month</h6>
+                            <h4 class="text-truncate" style="font-size: 25px;">' . $row['month'] . '</h4>
+                        </div>
+                    </div>
+                    
+                    <div class="col-4 col-md-4 col-xxl-4 d-xxl-flex align-items-xxl-center">
+                        <div>
+                            <h6 class="text-muted mb-2" style="font-size: 15px;color: rgba(0,0,0,0.25);">No of Attendance</h6>
+                            <h4 class="text-truncate" style="font-size: 25px;">' . $row['total_attendance'] . '</h4>
+                        </div>
+                    </div>
+                    
+                    <div class="col-4 col-md-4 col-xxl-4 d-xxl-flex align-items-xxl-center">
+                        <div>
+                            <h6 class="text-muted mb-2" style="font-size: 15px;color: rgba(0,0,0,0.25);">Total</h6>
+                            <h4 class="text-truncate" style="font-size: 25px;">' . $row['total_amount'] . '</h4>
+                        </div>
+                    </div>
+                    
+                    
+                         </div>';
+                    }
+                }
+
+                ?>
+            </div><!-- End: 1 Row 3 Columns -->
+            <!-- Start: See More Button -->
+        </div><!-- End: Our Cars - LIst -->
+
     </div>
     <div class="row" style="margin-right: 35px;margin-left: 35px;margin-bottom: 30px;">
         <div class="col-lg-7 col-xl-7 col-xxl-7" style="border-style: solid;border-color: rgba(33,37,41,0.21);border-radius: 10px;margin: 5px;padding: 9px 12px;padding-top: 10px;padding-bottom: 20px;">

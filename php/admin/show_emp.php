@@ -2,11 +2,11 @@
 
 
 
-$sql = "SELECT CONCAT(ua.fname, ' ', ua.lname) AS full_name, ua.uid, SUM(ro.price) AS total_amount FROM rent_order ro JOIN user_accounts ua ON ro.uid = ua.uid WHERE ua.usertype = 'user' GROUP BY ua.fname, ua.lname, ua.uid;";
-
+$sql = "SELECT CONCAT(fname, ' ', lname) AS full_name, uid FROM user_accounts WHERE usertype = 'emp';";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
+
     while ($row = $result->fetch_assoc()) {
 
 
@@ -23,12 +23,7 @@ if ($result->num_rows > 0) {
                             <h4 class="text-truncate" style="font-size: 25px;">' . $row['full_name'] . '</h4>
                         </div>
                     </div>
-                    <div class="col-md-4 col-xl-3 col-xxl-3 d-xxl-flex align-items-xxl-center">
-                        <div>
-                            <h6 class="text-muted mb-2" style="font-size: 15px;color: rgba(0,0,0,0.25);">Income</h6>
-                            <h4 style="font-size: 25px;">$' . $row['total_amount'] . '</h4>
-                        </div>
-                    </div>
+                 
                     <div class="col-md-4 col-xl-1 col-xxl-1 d-xl-flex d-xxl-flex justify-content-xl-center align-items-xl-center align-items-xxl-center" style="padding-left: 1px;margin-bottom: -12px;">
                         <div class="d-flex justify-content-center">
                          <a href = "php/admin/deleteuser.php?uid=' . $row['uid'] . '">

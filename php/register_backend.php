@@ -13,7 +13,7 @@ $result = $conn->query($sql);
 
 if ($result->num_rows == 1) {
     echo "E mail address is already exists...!";
-}else {
+} else {
     $uname = $_POST['username'];
     $pwd = encryption($_POST['password']);
     $fname = $_POST['fname'];
@@ -23,8 +23,8 @@ if ($result->num_rows == 1) {
     $ID = $_POST['idno'];
     $msg = "Hi $fname,\nWelcome to Speed Rent! Your account is set up. Start renting now and enjoy our services.\nHappy renting! - Speed Rent";
 
-    $sql = "INSERT INTO user_accounts (email, user_name, password, fname, lname, address, phoneNo, idno)
-                VALUES ('$email', '$uname','$pwd', '$fname', '$lname', '$add', '$phnno', '$ID')";
+    $sql = "INSERT INTO user_accounts (email, user_name, password, fname, lname, address, phoneNo, idno, usertype)
+                VALUES ('$email', '$uname','$pwd', '$fname', '$lname', '$add', '$phnno', '$ID' , 'user')";
 
     if ($conn->query($sql) === TRUE) {
         sendSMS($phnno, $msg);

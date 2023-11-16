@@ -15,19 +15,18 @@
 
 
     <?php
-    include "php/interface/navbar_user.php";
-    include "php/admin/show_data.php";
+    // include "php/interface/navbar_user.php";
+    // include "php/admin/show_data.php";
     include "php/dbcon.php";
     include "php/SendSMS.php";
 
     ?>
 
     <?php
-    include "php/encryption.php";
+    include "./php/encryption.php";
 
     $dclientids = explode(",", decryption($_COOKIE['UID']));
     $uid = $dclientids[0];
-
 
     $select = "*";
     $table = "user_accounts";
@@ -37,7 +36,7 @@
     $result = $conn->query($sql);
 
     $userData = array(); // Initialize an empty array
-
+    // echo $userData;
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
             $userData = $row; // Assign the fetched row data to the array

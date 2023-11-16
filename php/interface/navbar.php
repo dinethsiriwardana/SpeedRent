@@ -28,17 +28,28 @@
         </div>
         <div class="d-none d-md-block">
             <?php
+            include "./php/encryption.php";
+
             if (!isset($_COOKIE['UID'])) {
 
                 echo '
               <a class="btn btn-light me-2" role="button" style="background: var(--bs-gray-200);" href="register.php">Register</a>
               <a class="btn btn-primary" role="button" href="login.php" style="background: var(--bs-red);border-style: none;">Login</a></div>';
             } else {
+                $type = "";
+                if (isset($_COOKIE['USERTYPE'])) {
+                    if (decryption($_COOKIE['USERTYPE']) == "admin") {
+                        $type = "admin";
+                    } else   if (decryption($_COOKIE['USERTYPE']) == "user") {
+                        $type = "user";
+                    } else {
+                        $type = "emp";
+                    }
+                }
                 echo
                 '
-
                 <a class="btn btn-light me-2" role="button" style="background: var(--bs-gray-200);" href="user-details.php">Profile</a>
-                <a class="btn btn-light me-2" role="button" style="background: var(--bs-gray-200);" href="user.php">Dashboard</a>
+                <a class="btn btn-light me-2" role="button" style="background: var(--bs-gray-200);" href="' . $type . '.php">Dashboard</a>
                 <a class="btn btn-primary" role="button" href="php/logout.php" style="background: var(--bs-red);border-style: none;">Logout</a></div>';
             }
             ?>

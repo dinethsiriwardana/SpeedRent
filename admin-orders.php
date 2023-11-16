@@ -14,6 +14,8 @@
 <body>
     <!-- Start: Navbar Centered Brand -->
     <?php
+    include "php/encryption.php";
+
     include "php/interface/navbar_user.php";
     include "php/admin/show_data.php";
     include "php/dbcon.php";
