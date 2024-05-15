@@ -133,7 +133,7 @@ function toSavePhp() {
       stts: "Pending",
       stts_details: "",
       price: calculateTotalBill,
-      payment: "Online",
+      payment: "Null",
     },
     success: function (data, status) {
       // Handle success response here
