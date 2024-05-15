@@ -21,11 +21,13 @@ include "php/dbcon.php";
 <body>
     <!-- Start: Navbar Centered Brand -->
     <?php
+    include "php/encryption.php";
+
     include "php/interface/navbar_user.php";
+    include "landing_page.php";
 
     include "php/dbcon.php";
     include "php/log.php";
-    include "php/encryption.php";
 
     // echo $uid = $dclientids[0];
 

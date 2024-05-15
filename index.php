@@ -15,86 +15,20 @@
 
 <body style="border-style: none;border-color: white;">
     <?php
-    include "landing_page.php";
+    // include "landing_page.php";
 
     include "php/interface/navbar.php";
+    include "php/dbcon.php"
     ?>
     <div class="container">
         <h1 class="text-center" style="margin-top: 23px;">Our Latest ....</h1>
     </div><!-- Start: Pretty Product List -->
     <div class="row product-list" style="margin-left: 40px;margin-right: 40px;">
-        <div class="col-sm-6 col-md-4 product-item">
-            <div class="product-container">
-                <div class="row">
-                    <div class="col-md-12"><a class="product-image" href="#"><img src="assets/img/2500611.webp"></a></div>
-                </div>
-                <div class="row">
-                    <div class="col-8">
-                        <h2><a href="#">Car 1</a></h2>
-                    </div>
-                </div>
-                <div class="product-rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half"></i><a class="small-text" href="#">82 reviews</a></div>
-                <div class="row">
-                    <div class="col-12">
-                        <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare sem sed nisl dignissim, facilisis dapibus lacus vulputate. Sed lacinia lacinia magna. </p>
-                        <div class="row">
-                            <div class="col-6"><a class="btn btn-light" role="button" href="cars.html" style="background: var(--bs-red);border-style: none;color: var(--bs-btn-bg);">Rent Now !</a></div>
-                            <div class="col-6">
-                                <p class="product-price">$599.00 </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6 col-md-4 product-item">
-            <div class="product-container">
-                <div class="row">
-                    <div class="col-md-12"><a class="product-image" href="#" style="border-style: none;"><img src="assets/img/Toyota_Camry_Red_White_background_540853_2560x1440.jpg"></a></div>
-                </div>
-                <div class="row">
-                    <div class="col-8">
-                        <h2><a href="#">Car 2</a></h2>
-                    </div>
-                </div>
-                <div class="product-rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half"></i><a class="small-text" href="#">82 reviews</a></div>
-                <div class="row">
-                    <div class="col-12">
-                        <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare sem sed nisl dignissim, facilisis dapibus lacus vulputate. Sed lacinia lacinia magna. </p>
-                        <div class="row">
-                            <div class="col-6"><a class="btn btn-light" role="button" href="cars.html" style="background: var(--bs-red);color: var(--bs-btn-bg);">Rent Now !</a></div>
-                            <div class="col-6">
-                                <p class="product-price">$599.00 </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6 col-md-4 product-item">
-            <div class="product-container">
-                <div class="row">
-                    <div class="col-md-12"><a class="product-image" href="#"><img src="assets/img/BMW%20m5%202020.webp"></a></div>
-                </div>
-                <div class="row">
-                    <div class="col-8">
-                        <h2><a href="#">Car 3</a></h2>
-                    </div>
-                </div>
-                <div class="product-rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half"></i><a class="small-text" href="#">82 reviews</a></div>
-                <div class="row">
-                    <div class="col-12">
-                        <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare sem sed nisl dignissim, facilisis dapibus lacus vulputate. Sed lacinia lacinia magna. </p>
-                        <div class="row">
-                            <div class="col-6"><a class="btn btn-light fs-6" role="button" href="cars.html" style="background: var(--bs-danger);color: var(--bs-btn-bg);">Rent Now !</a></div>
-                            <div class="col-6">
-                                <p class="product-price">$599.00 </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+        <?php
+        include "php/showCars/showbestcars.php";
+        // include "php/admin/"
+        ?>
     </div><!-- End: Pretty Product List -->
     <!-- Start: Banner Heading Image -->
     <section class="py-4 py-xl-5">
@@ -106,14 +40,16 @@
                         <div class="text-white p-4 p-md-5" style="background: var(--bs-red);">
                             <h2 class="fw-bold text-white mb-3">We Have&nbsp;loyalty Offers For Our Valuable Customers</h2>
                             <p class="mb-4"></p>
-                            <h1 style="font-size: 33px;">3% off for 50,000.00</h1>
-                            <h1 style="font-size: 33px;">5% off for 100,000.00</h1>
-                            <h1 style="font-size: 33px;">10% off for 500,000.00</h1><!-- Start: Font Awesome List with Icons -->
+                            <h1 style="font-size: 33px;">50% Off Starting </h1>
+                            <h1 style="font-size: 33px;">Second Day Of</h1>
+                            <h1 style="font-size: 33px;">Your Rent</h1><!-- Start: Font Awesome List with Icons -->
                             <ul class="list-unstyled fa-ul"></ul><!-- End: Font Awesome List with Icons -->
-                            <div class="my-3"><a class="btn btn-primary btn-lg me-2" role="button" href="#" style="background: var(--bs-white);color: var(--bs-red);border-style: none;">See More</a></div>
+                            <div class="my-3">
+                                <a class="btn btn-primary btn-lg me-2" role="button" href="cars.php" style="background: var(--bs-white);color: var(--bs-red);border-style: none;">Rent Now</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-6 order-first order-md-last" style="min-height: 250px;height: 410.539px;"><img class="w-100 h-100 fit-cover" src="assets/img/Handing-over-keys-800x534.jpg"></div>
+                    <div class="col-md-6 order-first order-md-last" style="min-height: 250px;height: 410.539px;"><img class="w-100 h-100 fit-cover" src="assets/img/0000.jpg"></div>
                 </div>
             </div>
         </div><!-- End: 1 Row 2 Columns -->

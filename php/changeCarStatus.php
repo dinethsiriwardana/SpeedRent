@@ -1,16 +1,24 @@
 <?php
-    include 'dbcon.php';
+include 'dbcon.php';
 
-    $availabality = 0;
-    $carId = 30000;
+$carId = $_GET['carid'];
 
-    $sql = "UPDATE car_table SET availability = $availabality WHERE carid = $carId";
+$availability = $_POST['avl'];
 
-    if ($conn->query($sql) === TRUE) {
-        echo "record updated successfully";
-    } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-    }
+if ($availability == "avaiable") {
+    $sql = "UPDATE car_table SET availability = 1 WHERE carid = $carId";
+} else if ($availability == "navaiable") {
+    $sql = "UPDATE car_table SET availability = 0 WHERE carid = $carId";
+} else {
+    $sql = "UPDATE car_table SET availability = 2 WHERE carid = $carId";
+}
 
-    $conn->close();
-?>
+
+
+if ($conn->query($sql) === TRUE) {
+    header("Location: ../admin-cars.php");
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+// $conn->close();

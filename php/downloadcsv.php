@@ -1,45 +1,42 @@
+<?php
 
-<?php 
-    include 'dbcon.php';
 
-    $from = 'from_id';
-    $msg = 'msg';
-    $tbl = 'msg_table';
+include "dbcon.php";
 
-    // Create query
-    $query = "SELECT $from, $msg FROM $tbl";
+// Step 2: Execute the query
+$query = "SELECT * FROM rent_order";
+$result = mysqli_query($conn, $query);
 
-    // Get result
-    $result = mysqli_query($conn, $query);
+// Step 3: Fetch the rows and store them in an array
+$rows = array();
+while ($row = mysqli_fetch_assoc($result)) {
+    $rows[] = $row;
+}
 
-    // Fetch data
-    $msgs = mysqli_fetch_all($result, MYSQLI_ASSOC);
+// Step 4: Write the CSV data into a file
+$filename = 'rent_order.csv';
+$file = fopen($filename, 'w');
 
-    // Free result
-    mysqli_free_result($result);
+// Write the column headers
+$headers = array_keys($rows[0]);
+fputcsv($file, $headers);
 
-    // Close connection
-    mysqli_close($conn);
+// Write the data rows
+foreach ($rows as $row) {
+    fputcsv($file, $row);
+}
 
-    // Create filename
-    $filename = 'msg_data_'.date("Y-m-d-h-i-s").'.csv';
+fclose($file);
 
-    // Create output
-    $output = fopen("php://output", "w");
+// Step 5: Set headers for file download
+header('Content-Type: text/csv');
+header('Content-Disposition: attachment; filename="' . $filename . '"');
 
-    // Set column headers
-    fputcsv($output, array('from_id', 'msg'));
+// Step 6: Output the file contents
+readfile($filename);
 
-    // Add result data to csv
-    foreach ($msgs as $msg) {
-        fputcsv($output, $msg);
-    }
+// Step 7: Delete the temporary file
+unlink($filename);
 
-    // Set header to download file
-    header('Content-Type: text/csv; charset=utf-8');
-    header('Content-Disposition: attachment; filename='.$filename);
-
-    // Output file
-    fpassthru($output);
-
-?>
+// Step 8: Close the database connection
+// mysqli_close($conn);

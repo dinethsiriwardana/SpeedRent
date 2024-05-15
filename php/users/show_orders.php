@@ -1,8 +1,8 @@
 <?php
 
-$path = "./php/";
-include $path . "dbcon.php";
-include $path . "encryption.php";
+// $path = "./php/";
+// include $path . "dbcon.php";
+// include $path . "encryption.php";
 
 $select = "*";
 $table = "rent_order";
@@ -27,7 +27,8 @@ if ($result->num_rows > 0) {
                     <div class="col d-xl-flex flex-column justify-content-xl-center align-items-xl-start">
                         <h6 class="text-muted mb-2" style="font-size: 20px;color: rgba(0,0,0,0.25);">Order #' . $row['orderid'] . '</h6>
                     </div>
-                </div><img class="d-flex justify-content-center" src="assets/img/' . $row['carid'] . '.jpg" style="width: 100%;min-width: auto;" width="auto" height="auto">
+                </div>
+                <img class="d-flex justify-content-center" src="assets/cars/' . $row['carid'] . '.jpg" style="width: 100%;min-width: auto;" width="auto" height="auto">
             </div>
             <div class="col-lg-7 col-xl-8 col-xxl-8 d-lg-flex d-xl-flex flex-column align-items-lg-center justify-content-xl-center align-items-xl-start align-items-xxl-center">
                 <div class="row" style="width: 100%;">
@@ -74,7 +75,11 @@ if ($result->num_rows > 0) {
                     </div>
                 </div>
                 <div class="text-end d-lg-flex d-xxl-flex justify-content-lg-end justify-content-xxl-end" style="width: 100%;margin-top: 15px;margin-right: 20px;">
-                    <button class="btn btn-success" type="button" style="background: var(--bs-red);border-style: none;">Cancel</button>
+                <div class="col-2">
+                <a class="btn btn-primary" role="button" href="php/users/deleteorder.php?orderid=' . $row['orderid'] . '" style="background: var(--bs-red);border-style: none;margin-top: 15px;width: 49%;">Cancel</a>
+
+                </div>   
+        
                 </div>
             </div>
         </div>
