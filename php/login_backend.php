@@ -25,12 +25,13 @@ if ($result->num_rows == 1) {
     $datARR = [$row['uid'], $row['email'], $row["phoneNo"]];
     // $userName,$userPassword,$userAccound,$cardNO,$csvNo,$price
 
-    $usertype = $row["usertype"];
+    $membership = $row["membership"];
 
     // $userName,$userPassword,$userAccound,$cardNO,$csvNo,$price
+    "<script>console.log(" . $membership . ")</script>";
 
     setcookie('UID', encryption(implode(",", $datARR)), time() + 24000, "/");
-    setcookie('USERTYPE', encryption($usertype), time() + 24000, "/");
+    setcookie('membership', encryption($membership), time() + 24000, "/");
 
 
 

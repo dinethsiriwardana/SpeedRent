@@ -2,7 +2,7 @@
 
 
 
-$sql = "SELECT CONCAT(ua.fname, ' ', ua.lname) AS full_name, ua.uid, SUM(ro.price) AS total_amount FROM rent_order ro JOIN user_accounts ua ON ro.uid = ua.uid WHERE ua.usertype = 'user' GROUP BY ua.fname, ua.lname, ua.uid;";
+$sql = "SELECT CONCAT(ua.fname, ' ', ua.lname) AS full_name, ua.uid, SUM(ro.price) AS total_amount FROM rent_order ro JOIN user_accounts ua ON ro.uid = ua.uid WHERE ua.membership = 'user' GROUP BY ua.fname, ua.lname, ua.uid;";
 
 $result = $conn->query($sql);
 

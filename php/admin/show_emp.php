@@ -2,7 +2,7 @@
 
 
 
-$sql = "SELECT CONCAT(fname, ' ', lname) AS full_name, uid FROM user_accounts WHERE usertype = 'emp';";
+$sql = "SELECT CONCAT(fname, ' ', lname) AS full_name, uid FROM user_accounts WHERE membership = 'emp';";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {

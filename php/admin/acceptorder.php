@@ -23,7 +23,8 @@ if ($conn->query($sql) === TRUE) {
         $lname = $row['lname'];
 
         $msg = "Speed Rent \n\nDear $fname $lname, \nYour order has been accepted. \nOrder ID: $orderid \nDate: $date_from \n\nThank you for using Speed Rent.";
-        sendSMS($phone, $msg);
+        //         sendSMS($phone, $msg);
+        echo $msg;
         header("location: ../../admin.php");
     }
 } else {

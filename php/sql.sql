@@ -1,11 +1,11 @@
-create table car_category
+create table if not exists car_category
 (
     car_cat_id int auto_increment,
     brand      varchar(255) not null,
     model      varchar(255) not null
 );
 
-create table car_reviews
+create table if not exists car_reviews
 (
     review_id   int auto_increment,
     car_id      int           null,
@@ -13,7 +13,7 @@ create table car_reviews
     rating      decimal(3, 1) null
 );
 
-create table car_table
+create table if not exists car_table
 (
     carid        int auto_increment,
     car_brand    varchar(100) not null,
@@ -31,7 +31,7 @@ create table car_table
     description  varchar(250) null
 );
 
-create table emp_atnd
+create table if not exists emp_atnd
 (
     attend_id int auto_increment,
     emp_id    int      not null,
@@ -39,7 +39,7 @@ create table emp_atnd
     attend    int      not null
 );
 
-create table finised_order
+create table if not exists finised_order
 (
     orderid int    not null,
     carid   int    not null,
@@ -48,14 +48,14 @@ create table finised_order
     price   double not null
 );
 
-create table logs
+create table if not exists logs
 (
     id        int auto_increment,
     timestamp datetime null,
     message   text     null
 );
 
-create table medical_table
+create table if not exists medical_table
 (
     m_id   int auto_increment,
     emp_id int          not null,
@@ -63,7 +63,7 @@ create table medical_table
     date   date         not null
 );
 
-create table msg_table
+create table if not exists msg_table
 (
     msgid           int auto_increment,
     msg_type        varchar(10)                        not null,
@@ -76,7 +76,7 @@ create table msg_table
     datetime_column datetime default CURRENT_TIMESTAMP null
 );
 
-create table rent_order
+create table if not exists rent_order
 (
     orderid      int auto_increment,
     carid        int                                not null,
@@ -92,7 +92,7 @@ create table rent_order
     submit_date  datetime default CURRENT_TIMESTAMP not null
 );
 
-create table user_accounts
+create table if not exists user_accounts
 (
     uid          int auto_increment,
     email        varchar(100) not null,
@@ -109,6 +109,6 @@ create table user_accounts
     bankcardno   int          null,
     bankcvvno    int          null,
     membership   varchar(50)  null,
-    usertype     varchar(255) not null
+    membership     varchar(255) not null
 );
 

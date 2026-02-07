@@ -153,8 +153,7 @@
                 ?>
             </div><!-- End: 1 Row 3 Columns -->
             <!-- Start: See More Button -->
-        </div><!-- End: Our Cars - LIst -->
-
+        </div>
     </div>
     <div class="row" style="margin-right: 35px;margin-left: 35px;margin-bottom: 30px;">
         <!-- Start: Our Cars - LIst -->

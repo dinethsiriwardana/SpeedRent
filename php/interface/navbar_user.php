@@ -36,10 +36,10 @@
               <a class="btn btn-primary" role="button" href="login.php" style="background: var(--bs-red);border-style: none;">Login</a></div>';
             } else {
                 $type = "";
-                if (isset($_COOKIE['USERTYPE'])) {
-                    if (decryption($_COOKIE['USERTYPE']) == "admin") {
+                if (isset($_COOKIE['membership'])) {
+                    if (decryption($_COOKIE['membership']) == "admin") {
                         $type = "admin";
-                    } else   if (decryption($_COOKIE['USERTYPE']) == "user") {
+                    } else   if (decryption($_COOKIE['membership']) == "user") {
                         $type = "user";
                     } else {
                         $type = "emp";
